@@ -21,11 +21,11 @@ export default function Home() {
   return (
     <div className="bg-carbon">
       {/* 1️⃣ HERO SECTION */}
-      <section className="relative text-white h-screen flex items-center overflow-hidden -mt-20 pt-20">
+      <section className="relative text-white min-h-screen flex items-center overflow-hidden -mt-20 pt-20">
         {/* Background Image */}
         <div className="absolute inset-0">
           <img
-            src="https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+            src="https://images.unsplash.com/photo-1559181567-c3190ca9959b?auto=format&fit=crop&w=1200&q=80"
             alt="Japanese Import Vehicle"
             className="w-full h-full object-cover animate-ken-burns"
           />
@@ -39,16 +39,16 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.3 }}
           >
-            <h1 className="text-5xl md:text-7xl font-bold font-heading mb-8 leading-tight text-[#EAE2D6] drop-shadow-2xl">
+            <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold font-heading mb-6 leading-tight text-[#EAE2D6] drop-shadow-2xl">
               UMZE AUTOHAUS
             </h1>
-            <p className="text-2xl md:text-3xl mb-6 text-[#EAE2D6] font-semibold drop-shadow-lg">
-              Your Importing Experts — Transparent, Tailored, Trusted.
+            <p className="text-lg md:text-2xl lg:text-3xl mb-6 text-[#EAE2D6] font-semibold drop-shadow-lg">
+              We help people in Australia import quality cars from Japan
             </p>
           </motion.div>
 
           <motion.p
-            className="text-lg md:text-xl mb-12 max-w-3xl mx-auto text-[#BDB6AD] leading-relaxed drop-shadow-lg"
+            className="text-base md:text-lg lg:text-xl mb-12 max-w-3xl mx-auto text-[#BDB6AD] leading-relaxed drop-shadow-lg"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.6 }}
@@ -86,10 +86,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 2️⃣ INTRODUCTION — WHO WE ARE */}
+      {/* 2 INTRODUCTION — WHO WE ARE */}
       <section className="relative py-32 overflow-hidden bg-carbon">
         {/* Background Pattern */}
-        <div className="absolute inset-0 opacity-5">
+        <div className="absolute inset-0 opacity-0">
           <div className="absolute inset-0" style={{
             backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(234,226,214,0.15) 1px, transparent 0)',
             backgroundSize: '50px 50px'
@@ -112,11 +112,11 @@ export default function Home() {
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
             >
-              <div className="w-2 h-2 bg-[#25614F] rounded-full animate-pulse"></div>
+              {/* Removed animated dot */}
               <span className="text-[#25614F] font-semibold text-sm uppercase tracking-wider">Who We Are</span>
             </motion.div>
 
-            <h2 className="text-5xl md:text-6xl font-bold font-heading mb-6 text-[#EAE2D6]">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold font-heading mb-6 text-[#EAE2D6] uppercase tracking-wider">
               About Umze Autohaus
             </h2>
             <div className="w-24 h-1 bg-[#25614F] mx-auto rounded-full mb-4"></div>
@@ -137,7 +137,7 @@ export default function Home() {
                 {/* Image Container */}
                 <div className="relative overflow-hidden rounded-3xl border-2 border-[#25614F]/30 group-hover:border-[#25614F]/50 transition-all duration-500">
                   <img
-                    src="https://images.pexels.com/photos/1592384/pexels-photo-1592384.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                    src="https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&w=800&q=80"
                     alt="Japanese Car Import"
                     className="w-full h-[500px] object-cover transform group-hover:scale-105 transition-transform duration-700"
                   />
@@ -186,7 +186,7 @@ export default function Home() {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="text-2xl font-bold text-[#EAE2D6] mb-3 group-hover:text-[#A88F5C] transition-colors duration-300">
+                    <h3 className="text-xl md:text-2xl font-bold text-[#EAE2D6] mb-3 group-hover:text-[#A88F5C] transition-colors duration-300">
                       Our Story
                     </h3>
                   </div>
@@ -209,7 +209,7 @@ export default function Home() {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="text-2xl font-bold text-[#EAE2D6] mb-3 group-hover:text-[#A88F5C] transition-colors duration-300">
+                    <h3 className="text-xl md:text-2xl font-bold text-[#EAE2D6] mb-3 group-hover:text-[#A88F5C] transition-colors duration-300">
                       Our Vision
                     </h3>
                   </div>
@@ -231,7 +231,7 @@ export default function Home() {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="text-2xl font-bold text-[#EAE2D6] mb-3">
+                    <h3 className="text-xl md:text-2xl font-bold text-[#EAE2D6] mb-3">
                       Our Goal
                     </h3>
                   </div>
@@ -289,7 +289,7 @@ export default function Home() {
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-[#25614F]/20 rounded-full mb-4 group-hover:scale-110 transition-transform duration-300">
                   {item.icon}
                 </div>
-                <h4 className="text-xl font-bold text-[#E AE2D6] mb-2 group-hover:text-[#A88F5C] transition-colors duration-300">
+                <h4 className="text-lg md:text-xl font-bold text-[#EAE2D6] mb-2 group-hover:text-[#A88F5C] transition-colors duration-300">
                   {item.title}
                 </h4>
                 <p className="text-[#BDB6AD] text-sm">
@@ -327,7 +327,7 @@ export default function Home() {
               variants={fadeInUp}
               whileHover={{ y: -5 }}
             >
-              <h3 className="text-2xl font-bold text-[#EAE2D6] mb-6">FULL TRANSPARENCY</h3>
+              <h3 className="text-xl md:text-2xl font-bold text-[#EAE2D6] mb-6">FULL TRANSPARENCY</h3>
               <ul className="space-y-3 text-[#BDB6AD]">
                 <li>• Clear explanation of the import process</li>
                 <li>• Open cost breakdowns</li>
@@ -341,7 +341,7 @@ export default function Home() {
               variants={fadeInUp}
               whileHover={{ y: -5 }}
             >
-              <h3 className="text-2xl font-bold text-[#EAE2D6] mb-6">TAILORED GUIDANCE</h3>
+              <h3 className="text-xl md:text-2xl font-bold text-[#EAE2D6] mb-6">TAILORED GUIDANCE</h3>
               <ul className="space-y-3 text-[#BDB6AD]">
                 <li>• Vehicles sourced based on needs and budget</li>
                 <li>• Support for daily drivers, performance, and collector vehicles</li>
@@ -355,7 +355,7 @@ export default function Home() {
               variants={fadeInUp}
               whileHover={{ y: -5 }}
             >
-              <h3 className="text-2xl font-bold text-[#EAE2D6] mb-6">EXPERIENCE-LED APPROACH</h3>
+              <h3 className="text-xl md:text-2xl font-bold text-[#EAE2D6] mb-6">EXPERIENCE-LED APPROACH</h3>
               <ul className="space-y-3 text-[#BDB6AD]">
                 <li>• Real auction experience</li>
                 <li>• Condition checks beyond auction grades</li>
@@ -366,7 +366,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 4️⃣ PROCESS PREVIEW - Modern Flowing Timeline */}
+      {/* 4 PROCESS PREVIEW - Modern Flowing Timeline */}
       <section className="py-24 bg-[#0F1614] relative overflow-hidden">
         {/* Flowing Background Elements */}
         <div className="absolute inset-0 opacity-10">
@@ -389,11 +389,11 @@ export default function Home() {
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
             >
-              <div className="w-2 h-2 bg-[#25614F] rounded-full animate-pulse"></div>
+              {/* Removed animated dot */}
               <span className="text-[#25614F] font-semibold text-sm uppercase tracking-wider">6-Step Process</span>
             </motion.div>
 
-            <h2 className="text-4xl md:text-5xl font-bold font-heading mb-6 text-[#EAE2D6]">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold font-heading mb-6 text-[#EAE2D6]">
               Our Import Process
             </h2>
             <div className="w-24 h-1 bg-[#25614F] mx-auto rounded-full mb-4"></div>
@@ -896,6 +896,123 @@ export default function Home() {
               Get in touch
             </Link>
           </motion.div>
+        </div>
+      </section>
+      
+      {/* Testimonials Section */}
+      <section className="py-32 bg-[#0F1614] relative overflow-hidden">
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute inset-0" style={{
+            backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(37,97,79,0.15) 1px, transparent 0)',
+            backgroundSize: '50px 50px'
+          }}></div>
+        </div>
+        
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            <h2 className="text-4xl md:text-5xl font-bold font-heading mb-6 text-[#EAE2D6]">
+              What Our Clients Say
+            </h2>
+            <div className="w-24 h-1 bg-[#25614F] mx-auto rounded-full mb-4"></div>
+            <div className="w-16 h-1 bg-[#25614F]/50 mx-auto rounded-full"></div>
+          </motion.div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              {
+                name: 'John D.',
+                testimonial: 'Umze Autohaus made importing my dream car from Japan a breeze. Their transparency and guidance throughout the process were exceptional.',
+                rating: 5
+              },
+              {
+                name: 'Sarah M.',
+                testimonial: 'I was hesitant about importing, but the team at Umze Autohaus walked me through every step. The car arrived in perfect condition and exactly as described.',
+                rating: 5
+              },
+              {
+                name: 'Michael T.',
+                testimonial: 'Professional service from start to finish. The compliance process was handled seamlessly, and I couldn\'t be happier with my import experience.',
+                rating: 5
+              }
+            ].map((testimonial, index) => (
+              <motion.div
+                key={index}
+                className="bg-[#1a2420] rounded-xl p-8 border border-[#25614F]/20 hover:border-[#25614F]/50 transition-all duration-500"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                whileHover={{ y: -10 }}
+              >
+                <div className="flex mb-4">
+                  {[...Array(testimonial.rating)].map((_, i) => (
+                    <svg key={i} className="w-5 h-5 text-[#25614F] fill-current" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                    </svg>
+                  ))}
+                </div>
+                <p className="text-[#BDB6AD] leading-relaxed mb-6 italic">
+                  "{testimonial.testimonial}"
+                </p>
+                <p className="text-[#EAE2D6] font-semibold">- {testimonial.name}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+      
+      {/* Past Imports Gallery */}
+      <section className="py-32 bg-carbon relative overflow-hidden">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            <h2 className="text-4xl md:text-5xl font-bold font-heading mb-6 text-[#EAE2D6]">
+              Our Past Imports
+            </h2>
+            <div className="w-24 h-1 bg-[#25614F] mx-auto rounded-full mb-4"></div>
+            <div className="w-16 h-1 bg-[#25614F]/50 mx-auto rounded-full"></div>
+          </motion.div>
+          
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {[
+              'https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=400&q=80',
+              'https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&w=400&q=80',
+              'https://images.unsplash.com/photo-1583121274602-3e2820c69888?auto=format&fit=crop&w=400&q=80',
+              'https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=400&q=80',
+              'https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&w=400&q=80',
+              'https://images.unsplash.com/photo-1583121274602-3e2820c69888?auto=format&fit=crop&w=400&q=80',
+              'https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=400&q=80',
+              'https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&w=400&q=80'
+            ].map((image, index) => (
+              <motion.div
+                key={index}
+                className="relative overflow-hidden rounded-xl group"
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                whileHover={{ scale: 1.05 }}
+              >
+                <img
+                  src={image}
+                  alt={`Past import ${index + 1}`}
+                  className="w-full h-48 object-cover transform group-hover:scale-110 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
     </div>

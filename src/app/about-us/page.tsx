@@ -24,7 +24,7 @@ export default function AboutUs() {
       <section className="relative text-white h-screen flex items-center overflow-hidden -mt-20 pt-20">
         <div className="absolute inset-0">
           <img
-            src="https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg?auto=compress&cs=tinysrgb&w=1920&q=80"
+            src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1200&q=80"
             alt="Japanese classic car"
             className="w-full h-full object-cover animate-ken-burns"
           />
@@ -49,7 +49,7 @@ export default function AboutUs() {
             </motion.div>
 
             <h1 className="text-5xl md:text-7xl font-bold font-heading mb-8 leading-tight text-[#EAE2D6] drop-shadow-2xl">
-              We Help People Import Quality Cars From Japan
+              WE HELP PEOPLE IN AUSTRALIA IMPORT QUALITY CARS FROM JAPAN
             </h1>
             <div className="flex justify-center gap-4 mb-8">
               <div className="w-20 h-1 bg-[#25614F] rounded-full"></div>
@@ -83,7 +83,7 @@ export default function AboutUs() {
             </div>
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 bg-[#25614F] rounded-full"></div>
-              <span>No Hype</span>
+              <span>REALISTIC EXPECTATIONS</span>
             </div>
           </motion.div>
         </div>
@@ -139,7 +139,7 @@ export default function AboutUs() {
             {/* Story Content - Flowing Without Boxes */}
             <div className="space-y-10 pt-12">
               {[
-                "In 2012, the founder\'s father began importing cars from Japan. It wasn\'t about making money - it was about a genuine love for Japanese vehicles and an understanding of what they offered Australian buyers.",
+                "In 2012, the founder's father began importing vehicles from Japan not as a business venture, but driven by a genuine appreciation for Japanese cars and an understanding of the value they offered Australian buyers.",
                 
                 "Seven years later, in 2019, the founder imported his first car: a Toyota Chaser. That experience opened his eyes to the real value of Japanese imports. The car was in significantly better condition than anything available locally, and the savings were substantial.",
                 
@@ -164,6 +164,23 @@ export default function AboutUs() {
                   </p>
                 </motion.div>
               ))}
+              
+              {/* Additional bullet point */}
+              <motion.div
+                className="relative pl-8 md:pl-12"
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+              >
+                {/* Timeline Dot */}
+                <div className="absolute left-0 top-2 w-4 h-4 bg-[#25614F] rounded-full shadow-lg"></div>
+                <div className="absolute left-2 top-6 w-px h-full bg-gradient-to-b from-[#25614F]/50 to-transparent"></div>
+                
+                <p className="text-[#BDB6AD] text-lg leading-relaxed">
+                  Today, that same attention to detail and honest process is applied to every vehicle sourced, so clients know exactly what they're buying.
+                </p>
+              </motion.div>
 
               {/* Closing Statement */}
               <motion.div

@@ -138,39 +138,7 @@ export default function ImportNow() {
                 />
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <label htmlFor="transmission" className="block text-white font-semibold mb-2">
-                    Transmission
-                  </label>
-                  <select
-                    id="transmission"
-                    name="transmission"
-                    className="w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-3 text-white focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20"
-                  >
-                    <option value="">Any</option>
-                    <option value="manual">Manual</option>
-                    <option value="automatic">Automatic</option>
-                  </select>
-                </div>
-
-                <div>
-                  <label htmlFor="fuel" className="block text-white font-semibold mb-2">
-                    Fuel Type
-                  </label>
-                  <select
-                    id="fuel"
-                    name="fuel"
-                    className="w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-3 text-white focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20"
-                  >
-                    <option value="">Any</option>
-                    <option value="petrol">Petrol</option>
-                    <option value="diesel">Diesel</option>
-                    <option value="hybrid">Hybrid</option>
-                    <option value="electric">Electric</option>
-                  </select>
-                </div>
-              </div>
+              {/* Transmission and Fuel Type fields removed as requested */}
 
               <div>
                 <label htmlFor="country" className="block text-white font-semibold mb-2">
@@ -182,8 +150,8 @@ export default function ImportNow() {
                   className="w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-3 text-white focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20"
                 >
                   <option value="Japan">Japan</option>
-                  <option value="USA">USA</option>
                   <option value="UK">UK</option>
+                  <option value="Hong Kong">Hong Kong</option>
                 </select>
               </div>
 

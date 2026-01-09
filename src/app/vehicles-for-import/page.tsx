@@ -26,7 +26,7 @@ export default function VehiclesForImport() {
       grade: 'Grade A',
       country: 'Japan',
       priceRange: 'AUD $25,000 – $28,000',
-      image: 'https://images.pexels.com/photos/9735309/pexels-photo-9735309.jpeg?auto=compress&cs=tinysrgb&w=800&q=80',
+      image: 'https://images.unsplash.com/photo-1550355291-bbee04a92027?auto=format&fit=crop&w=800&q=80',
       transmission: 'Manual',
       fuel: 'Petrol'
     },
@@ -39,7 +39,7 @@ export default function VehiclesForImport() {
       grade: 'Grade A',
       country: 'Japan',
       priceRange: 'AUD $35,000 – $38,000',
-      image: 'https://images.pexels.com/photos/627678/pexels-photo-627678.jpeg?auto=compress&cs=tinysrgb&w=800&q=80',
+      image: 'https://images.unsplash.com/photo-1525609004556-c46c7d6cf023?auto=format&fit=crop&w=800&q=80',
       transmission: 'Manual',
       fuel: 'Petrol'
     },
@@ -52,7 +52,7 @@ export default function VehiclesForImport() {
       grade: 'Grade B',
       country: 'Japan',
       priceRange: 'AUD $45,000 – $48,000',
-      image: 'https://images.pexels.com/photos/3972755/pexels-photo-3972755.jpeg?auto=compress&cs=tinysrgb&w=800&q=80',
+      image: 'https://images.unsplash.com/photo-1548802673-380ab8ebc7b7?auto=format&fit=crop&w=800&q=80',
       transmission: 'Manual',
       fuel: 'Petrol'
     },
@@ -65,7 +65,7 @@ export default function VehiclesForImport() {
       grade: 'Grade A',
       country: 'Japan',
       priceRange: 'AUD $22,000 – $25,000',
-      image: 'https://images.pexels.com/photos/164634/pexels-photo-164634.jpeg?auto=compress&cs=tinysrgb&w=800&q=80',
+      image: 'https://images.unsplash.com/photo-1519996409143-03b5428835b7?auto=format&fit=crop&w=800&q=80',
       transmission: 'Manual',
       fuel: 'Petrol'
     },
@@ -78,7 +78,7 @@ export default function VehiclesForImport() {
       grade: 'Grade A',
       country: 'Japan',
       priceRange: 'AUD $18,000 – $21,000',
-      image: 'https://images.pexels.com/photos/707046/pexels-photo-707046.jpeg?auto=compress&cs=tinysrgb&w=800&q=80',
+      image: 'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=800&q=80',
       transmission: 'Manual',
       fuel: 'Petrol'
     },
@@ -91,7 +91,7 @@ export default function VehiclesForImport() {
       grade: 'Grade B',
       country: 'Japan',
       priceRange: 'AUD $32,000 – $35,000',
-      image: 'https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg?auto=compress&cs=tinysrgb&w=800&q=80',
+      image: 'https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&w=800&q=80',
       transmission: 'Manual',
       fuel: 'Petrol'
     }
@@ -117,7 +117,7 @@ export default function VehiclesForImport() {
       <section className="relative text-white min-h-[60vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="https://images.pexels.com/photos/164634/pexels-photo-164634.jpeg?auto=compress&cs=tinysrgb&w=1920&q=80"
+            src="https://images.unsplash.com/photo-1548802673-380ab8ebc7b7?auto=format&fit=crop&w=1920&q=80"
             alt="Japanese sports cars collection"
             className="w-full h-full object-cover"
           />

@@ -16,7 +16,7 @@ export default function JapaneseAuctionGradingSystem() {
       <section className="relative text-white h-screen flex items-center overflow-hidden -mt-20 pt-20">
         <div className="absolute inset-0">
           <img
-            src="https://images.pexels.com/photos/1592384/pexels-photo-1592384.jpeg?auto=compress&cs=tinysrgb&w=1920&q=80"
+            src="https://images.unsplash.com/photo-1519996409143-03b5428835b7?auto=format&fit=crop&w=1920&q=80"
             alt="Japanese auction grading system"
             className="w-full h-full object-cover animate-ken-burns"
           />

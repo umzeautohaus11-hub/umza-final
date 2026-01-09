@@ -34,6 +34,14 @@ export default function Blog() {
       date: 'December 24, 2025',
       readTime: '10 min read',
       category: 'Beginner Guide'
+    },
+    {
+      id: 'benefits-of-importing-from-japan',
+      title: 'Benefits of Importing from Japan: Why Japanese Imports Are the Smart Choice',
+      excerpt: 'Discover the advantages of importing vehicles from Japan, including better condition, unique models, and transparent history.',
+      date: 'January 9, 2026',
+      readTime: '8 min read',
+      category: 'Buyer Education'
     }
   ];
 
@@ -43,7 +51,7 @@ export default function Blog() {
       <section className="relative text-white h-screen flex items-center overflow-hidden -mt-20 pt-20">
         <div className="absolute inset-0">
           <img
-            src="https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg?auto=compress&cs=tinysrgb&w=1920&q=80"
+            src="https://images.unsplash.com/photo-1553440569-bcc63803a83d?auto=format&fit=crop&w=1920&q=80"
             alt="Japanese vehicle import"
             className="w-full h-full object-cover"
           />
@@ -85,7 +93,7 @@ export default function Blog() {
                 {/* Image */}
                 <div className="relative h-64 md:h-auto">
                   <img
-                    src="https://images.pexels.com/photos/1592384/pexels-photo-1592384.jpeg?auto=compress&cs=tinysrgb&w=800&q=80"
+                    src="https://images.unsplash.com/photo-1519996409143-03b5428835b7?auto=format&fit=crop&w=800&q=80"
                     alt="Japanese auction sheet"
                     className="w-full h-full object-cover"
                   />
@@ -134,7 +142,7 @@ export default function Blog() {
                 {/* Image */}
                 <div className="relative h-64 md:h-auto md:order-2">
                   <img
-                    src="https://images.pexels.com/photos/112460/pexels-photo-112460.jpeg?auto=compress&cs=tinysrgb&w=800&q=80"
+                    src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=800&q=80"
                     alt="First-time importer guide"
                     className="w-full h-full object-cover"
                   />
@@ -163,6 +171,55 @@ export default function Blog() {
                   
                   <Link
                     href="/blog/how-to-read-auction-sheet"
+                    className="inline-flex items-center gap-2 text-[#25614F] font-semibold hover:text-[#1e4f3f] transition-colors"
+                  >
+                    <span>Read Article</span>
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                    </svg>
+                  </Link>
+                </div>
+              </div>
+            </motion.article>
+            
+            {/* Blog 3 */}
+            <motion.article
+              variants={fadeInUp}
+              className="bg-[#0F1614] rounded-3xl overflow-hidden border border-[#25614F]/30 hover:border-[#25614F]/60 transition-all duration-500"
+            >
+              <div className="grid md:grid-cols-2">
+                {/* Image */}
+                <div className="relative h-64 md:h-auto">
+                  <img
+                    src="https://images.unsplash.com/photo-1553440569-bcc63803a83d?auto=format&fit=crop&w=800&q=80"
+                    alt="Benefits of importing from Japan"
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute top-6 left-6">
+                    <span className="bg-[#25614F] text-[#EAE2D6] px-4 py-2 rounded-full text-sm font-semibold">
+                      Buyer Education
+                    </span>
+                  </div>
+                </div>
+                
+                {/* Content */}
+                <div className="p-8 md:p-10 flex flex-col justify-center">
+                  <div className="flex items-center gap-4 text-[#BDB6AD] text-sm mb-4">
+                    <span>{blogs[2].date}</span>
+                    <span className="w-1 h-1 bg-[#25614F] rounded-full"></span>
+                    <span>{blogs[2].readTime}</span>
+                  </div>
+                  
+                  <h2 className="text-2xl md:text-3xl font-bold font-heading text-[#EAE2D6] mb-4">
+                    {blogs[2].title}
+                  </h2>
+                  
+                  <p className="text-[#BDB6AD] leading-relaxed mb-6">
+                    {blogs[2].excerpt}
+                  </p>
+                  
+                  <Link
+                    href="/blog/benefits-of-importing-from-japan"
                     className="inline-flex items-center gap-2 text-[#25614F] font-semibold hover:text-[#1e4f3f] transition-colors"
                   >
                     <span>Read Article</span>

@@ -11,7 +11,7 @@ export default function Finance() {
   // Fixed values
   const SHIPPING_CHARGES = 2750;
   const LOCAL_TRANSPORT = 280;
-  const COMPLIANCE_COST = 1650;
+  const COMPLIANCE_COST = 1800;
   const SERVICE_FEE = 1250;
 
   // Auto-calculated values
@@ -152,7 +152,10 @@ export default function Finance() {
                       <input
                         type="number"
                         value={fobPrice}
-                        onChange={(e) => setFobPrice(Math.max(0, Number(e.target.value)))}
+                        onChange={(e) => {
+                          const value = e.target.value.replace(/^0+/, ''); // Remove leading zeros
+                          setFobPrice(Math.max(0, Number(value || 0)));
+                        }}
                         className="w-full bg-[#1a2420] border-2 border-[#25614F]/40 rounded-xl pl-10 pr-4 py-4 text-[#EAE2D6] text-xl font-semibold placeholder-[#BDB6AD]/50 focus:border-[#25614F] focus:outline-none focus:ring-2 focus:ring-[#25614F]/30 transition-all"
                         placeholder="30000"
                         min="0"
@@ -166,6 +169,7 @@ export default function Finance() {
                       Import Duty (%)
                     </label>
                     <p className="text-sm text-[#BDB6AD] mb-3">Select origin of manufacture</p>
+                    <p className="text-xs text-[#BDB6AD]/80 mb-3 italic">Duty is based on country of manufacture, not where the car is purchased or shipped from.</p>
                     <div className="grid grid-cols-2 gap-4">
                       <motion.button
                         onClick={() => setImportDuty(0)}
@@ -178,7 +182,7 @@ export default function Finance() {
                         whileTap={{ scale: 0.95 }}
                       >
                         0%
-                        <span className="block text-sm font-normal mt-1 opacity-80">Japanese</span>
+                        <span className="block text-sm font-normal mt-1 opacity-80">Japanese built</span>
                       </motion.button>
                       <motion.button
                         onClick={() => setImportDuty(5)}
@@ -468,6 +472,36 @@ export default function Finance() {
                 </div>
               </motion.div>
             ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Finance Document Section */}
+      <section className="py-20 bg-carbon">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <motion.div
+            className="bg-[#25614F]/10 rounded-2xl p-8 border border-[#25614F]/30"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            <h3 className="text-2xl font-bold text-[#EAE2D6] mb-4">Finance Information</h3>
+            <p className="text-[#BDB6AD] mb-6">
+              We have financing options available for your import. Download our information document for details.
+            </p>
+            <motion.a
+              href="/finance-options.docx"
+              download
+              className="inline-flex items-center gap-2 bg-[#25614F] text-[#EAE2D6] px-6 py-3 rounded-full hover:bg-[#1e4f3f] transition-all duration-300"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+              Download Finance Document
+            </motion.a>
           </motion.div>
         </div>
       </section>

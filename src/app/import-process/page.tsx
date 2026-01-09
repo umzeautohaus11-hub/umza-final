@@ -8,14 +8,14 @@ export default function ImportProcess() {
       number: 1,
       title: "Tell Us What You Want",
       description: "Describe your budget, model preferences, and vehicle purpose.",
-      details: "We source options from Japan, USA, and UK auctions.",
+      details: "We source options from Japan auctions and UK/Hong Kong local markets.",
       icon: "🎯"
     },
     {
       number: 2,
       title: "Live Auction Access",
       description: "We shortlist suitable cars and review:",
-      details: "Auction grade, Body condition, Underbody images, Rust points, Maintenance history",
+      details: "Auction grade, Body condition, Underbody images, Rust points, Maintenance history. We share recent sold data on your chosen car before we go ahead.",
       icon: "🔍"
     },
     {
@@ -49,19 +49,21 @@ export default function ImportProcess() {
     {
       number: 7,
       title: "Final Delivery",
-      description: "Car is delivered to you or picked up in Melbourne.",
+      description: "Car is delivered to you or picked up in Melbourne",
       details: "Includes post-delivery support.",
       icon: "🏁"
     }
   ];
 
   const costBreakdown = {
-    auctionPrice: 900000, // ¥
-    exportFees: 50000, // ¥
-    shipping: 2000, // AUD
-    gstDuty: 1800, // AUD
-    compliance: 1200, // AUD
-    total: 17800 // AUD
+    auctionPrice: 30000, // AUD (FOB)
+    importDuty: 0, // No duty (Japanese vehicle)
+    shipping: 2750, // AUD
+    gst: 3275, // AUD (10% of FOB + Shipping)
+    localTransport: 280, // AUD
+    compliance: 1800, // AUD
+    serviceFee: 1250, // AUD
+    total: 39355 // AUD
   };
 
   const fadeInUp = {
@@ -124,7 +126,7 @@ export default function ImportProcess() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.6 }}
           >
-            From vehicle search to delivery in Melbourne — we handle everything.
+            From vehicle search to delivery in Melbourne we handle everything.
           </motion.p>
 
           <motion.div
@@ -142,14 +144,7 @@ export default function ImportProcess() {
               Start Your Import
             </motion.a>
 
-            <motion.a
-              href="/vehicles-for-import"
-              className="border-2 border-[#EAE2D6] text-[#EAE2D6] px-12 py-5 rounded-full font-bold text-lg hover:bg-[#EAE2D6]/10 backdrop-blur-sm transition-all duration-300"
-              whileHover={{ scale: 1.05, y: -2 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              View Current Auctions
-            </motion.a>
+            {/* Second button removed as requested */}
           </motion.div>
         </div>
       </section>
@@ -298,11 +293,13 @@ export default function ImportProcess() {
               >
                 <div className="space-y-4">
                   {[
-                    { label: 'Auction Price', value: `¥${costBreakdown.auctionPrice.toLocaleString()}` },
-                    { label: 'Export Fees', value: `¥${costBreakdown.exportFees.toLocaleString()}` },
-                    { label: 'Shipping', value: `AUD $${costBreakdown.shipping.toLocaleString()}` },
-                    { label: 'GST + Duty', value: `AUD $${costBreakdown.gstDuty.toLocaleString()}` },
-                    { label: 'Compliance', value: `AUD $${costBreakdown.compliance.toLocaleString()}` }
+                    { label: 'FOB Price', value: `AUD $${costBreakdown.auctionPrice.toLocaleString()}` },
+                    { label: 'Import Duty', value: `AUD $${costBreakdown.importDuty.toLocaleString()}` },
+                    { label: 'Shipping + Charges', value: `AUD $${costBreakdown.shipping.toLocaleString()}` },
+                    { label: 'GST (10%)', value: `AUD $${costBreakdown.gst.toLocaleString()}` },
+                    { label: 'Local Transport', value: `AUD $${costBreakdown.localTransport.toLocaleString()}` },
+                    { label: 'Compliance', value: `AUD $${costBreakdown.compliance.toLocaleString()}` },
+                    { label: 'UMZE Autohaus Service Fee', value: `AUD $${costBreakdown.serviceFee.toLocaleString()}` }
                   ].map((item, index) => (
                     <motion.div
                       key={index}
@@ -416,14 +413,7 @@ export default function ImportProcess() {
             >
               <span className="relative z-10">Start Your Import</span>
             </motion.a>
-            <motion.a
-              href="/vehicles-for-import"
-              className="border-2 border-[#EAE2D6] text-[#EAE2D6] px-12 py-5 rounded-full font-bold text-lg hover:bg-[#EAE2D6]/10 backdrop-blur-sm transition-all duration-300"
-              whileHover={{ scale: 1.05, y: -3 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              View Current Auctions
-            </motion.a>
+            {/* Second button removed as requested */}
           </motion.div>
         </div>
       </section>

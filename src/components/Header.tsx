@@ -22,6 +22,7 @@ const Header = () => {
     { href: '/blog', label: 'Blog' },
     { href: '/import-process', label: 'Our Process' },
     { href: '/finance', label: 'Calculator' },
+    { href: '/faqs', label: 'FAQs' },
     { href: '/contact-us', label: 'Contact' },
   ];
 
