@@ -16,7 +16,7 @@ export default function JapaneseAuctionGradingSystem() {
       <section className="relative text-white h-screen flex items-center overflow-hidden -mt-20 pt-20">
         <div className="absolute inset-0">
           <img
-            src="/images/hero-bg.jpg"
+            src="/images/2012-Mercedes-Benz-S63-AMG-Collecting-Cars-26-05-2025-Ari-Gelgec25.avif"
             alt="Japanese auction grading system"
             className="w-full h-full object-cover animate-ken-burns"
           />
@@ -351,7 +351,7 @@ export default function JapaneseAuctionGradingSystem() {
                 },
                 {
                   title: 'Condition vs Kilometres',
-                  desc: 'Does the wear match the stated kilometres? A car with 50,000km shouldn\'t look like 200,000km.'
+                  desc: "Does the wear match the stated kilometres? A car with 50,000km shouldn't look like 200,000km."
                 }
               ].map((item, index) => (
                 <div key={index} className="bg-[#1a2420] rounded-xl p-4 border border-[#25614F]/20">
@@ -420,7 +420,7 @@ export default function JapaneseAuctionGradingSystem() {
               {[
                 {
                   title: 'Auction Sheet Translation',
-                  desc: 'Every code and comment is translated and explained in plain English. We ensure you understand exactly what you\'re looking at.'
+                  desc: "Every code and comment is translated and explained in plain English. We ensure you understand exactly what you're looking at."
                 },
                 {
                   title: 'Additional Photos',
@@ -428,7 +428,7 @@ export default function JapaneseAuctionGradingSystem() {
                 },
                 {
                   title: 'Auction History Checks',
-                  desc: 'We research the vehicle\'s auction history. Previous listings can reveal persistent issues or pricing trends.'
+                  desc: "We research the vehicle's auction history. Previous listings can reveal persistent issues or pricing trends."
                 },
                 {
                   title: 'Independent Inspections',

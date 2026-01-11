@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import TestimonialCarousel from '@/components/TestimonialCarousel';
 
 export default function Home() {
   const fadeInUp = {
@@ -923,47 +924,8 @@ export default function Home() {
             <div className="w-16 h-1 bg-[#25614F]/50 mx-auto rounded-full"></div>
           </motion.div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                name: 'John D.',
-                testimonial: 'Umze Autohaus made importing my dream car from Japan a breeze. Their transparency and guidance throughout the process were exceptional.',
-                rating: 5
-              },
-              {
-                name: 'Sarah M.',
-                testimonial: 'I was hesitant about importing, but the team at Umze Autohaus walked me through every step. The car arrived in perfect condition and exactly as described.',
-                rating: 5
-              },
-              {
-                name: 'Michael T.',
-                testimonial: 'Professional service from start to finish. The compliance process was handled seamlessly, and I couldn\'t be happier with my import experience.',
-                rating: 5
-              }
-            ].map((testimonial, index) => (
-              <motion.div
-                key={index}
-                className="bg-[#1a2420] rounded-xl p-8 border border-[#25614F]/20 hover:border-[#25614F]/50 transition-all duration-500"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                whileHover={{ y: -10 }}
-              >
-                <div className="flex mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <svg key={i} className="w-5 h-5 text-[#25614F] fill-current" viewBox="0 0 20 20">
-                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                    </svg>
-                  ))}
-                </div>
-                <p className="text-[#BDB6AD] leading-relaxed mb-6 italic">
-                  "{testimonial.testimonial}"
-                </p>
-                <p className="text-[#EAE2D6] font-semibold">- {testimonial.name}</p>
-              </motion.div>
-            ))}
-          </div>
+          {/* Testimonial Carousel */}
+          <TestimonialCarousel />
 
           {/* Google Reviews Link */}
           <motion.div
@@ -974,7 +936,7 @@ export default function Home() {
             transition={{ duration: 0.8, delay: 0.4 }}
           >
             <motion.a
-              href="https://www.google.com/search?q=umze+autohaus&rlz=1C5CHFA_enAU1014AU1014&oq=umze+autohaus&aqs=chrome..69i57j0i22i30l2j0i15i22i30j0i22i30l2.1234j0j7&sourceid=chrome&ie=UTF-8#lrd=0x6ad642bf0d2e4b8d:0x1b0b0b0b0b0b0b0b,1,,,,"
+              href="https://share.google/Ch858CdwF3raEktou"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-3 bg-[#25614F] text-[#EAE2D6] px-8 py-4 rounded-xl font-bold hover:bg-[#1e4f3f] transition-all duration-300 shadow-lg hover:shadow-xl"
@@ -993,7 +955,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Past Imports Gallery */}
+      {/* Past Imports Gallery - Enhanced with Vehicle Details */}
       <section className="py-32 bg-carbon relative overflow-hidden">
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -1003,42 +965,197 @@ export default function Home() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
+            <motion.div
+              className="inline-flex items-center gap-3 bg-[#25614F]/20 rounded-full px-6 py-3 mb-8 border border-[#25614F]/30"
+              initial={{ scale: 0.8, opacity: 0 }}
+              whileInView={{ scale: 1, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+            >
+              <div className="w-3 h-3 bg-[#25614F] rounded-full animate-pulse"></div>
+              <span className="text-[#25614F] font-semibold text-sm uppercase tracking-wider">100+ Vehicles Successfully Imported</span>
+            </motion.div>
+            
             <h2 className="text-4xl md:text-5xl font-bold font-heading mb-6 text-[#EAE2D6]">
               Our Past Imports
             </h2>
             <div className="w-24 h-1 bg-[#25614F] mx-auto rounded-full mb-4"></div>
             <div className="w-16 h-1 bg-[#25614F]/50 mx-auto rounded-full"></div>
+            <p className="text-xl text-[#BDB6AD] max-w-3xl mx-auto leading-relaxed">
+              High-quality vehicles imported from Japan with meticulous attention to detail and transparent processes
+            </p>
           </motion.div>
           
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          {/* Enhanced Gallery with Vehicle Information */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              '/images/2007-Mercedes-Benz-S63-AMG-Collecting-Cars-06-08-2025-Ari-Gelgec20.avif',
-              '/images/2011-Mercedes-Benz-S63-AMG-L-Collecting-Cars-01-11-2025-Ari-Gelgec23.avif',
-              '/images/2012-Mercedes-Benz-S63-AMG-Collecting-Cars-26-05-2025-Ari-Gelgec25.avif',
-              '/images/2012-Mercedes-Benz-S63-AMG-Collecting-Cars-26-05-2025-Ari-Gelgec75.avif',
-              '/images/2012-Mercedes-Benz-S63-AMG-Collecting-Cars-26-05-2025-Ari-Gelgec78.avif',
-              '/images/2011-Mercedes-Benz-S63-AMG-L-Collecting-Cars-01-11-2025-Ari-Gelgec79.avif',
-              '/images/2007-Mercedes-Benz-S63-AMG-Collecting-Cars-06-08-2025-Ari-Gelgec20.avif',
-              '/images/2011-Mercedes-Benz-S63-AMG-L-Collecting-Cars-01-11-2025-Ari-Gelgec23.avif'
-            ].map((image, index) => (
+              {
+                image: '/images/WhatsApp Image 2025-12-22 at 15.59.28.jpeg',
+                title: '2025 Import - Vehicle 1',
+                price: '$45,000',
+                specs: 'Imported December 2025',
+                condition: 'Grade 4B - Excellent'
+              },
+              {
+                image: '/images/WhatsApp Image 2025-12-22 at 16.03.45.jpeg',
+                title: '2025 Import - Vehicle 2',
+                price: '$52,000',
+                specs: 'Imported December 2025',
+                condition: 'Grade 4B - Excellent'
+              },
+              {
+                image: '/images/WhatsApp Image 2025-12-22 at 16.04.14.jpeg',
+                title: '2025 Import - Vehicle 3',
+                price: '$48,000',
+                specs: 'Imported December 2025',
+                condition: 'Grade 4B - Excellent'
+              },
+              {
+                image: '/images/WhatsApp Image 2025-12-22 at 16.04.25.jpeg',
+                title: '2025 Import - Vehicle 4',
+                price: '$47,500',
+                specs: 'Imported December 2025',
+                condition: 'Grade 4B - Excellent'
+              },
+              {
+                image: '/images/WhatsApp Image 2025-12-22 at 16.08.41.jpeg',
+                title: '2025 Import - Vehicle 5',
+                price: '$46,800',
+                specs: 'Imported December 2025',
+                condition: 'Grade 4B - Excellent'
+              },
+              {
+                image: '/images/WhatsApp Image 2025-12-22 at 16.09.29.jpeg',
+                title: '2025 Import - Vehicle 6',
+                price: '$51,200',
+                specs: 'Imported December 2025',
+                condition: 'Grade 4B - Excellent'
+              },
+              {
+                image: '/images/WhatsApp Image 2025-12-22 at 16.12.18.jpeg',
+                title: '2025 Import - Vehicle 7',
+                price: '$38,500',
+                specs: 'Imported December 2025',
+                condition: 'Grade 4B - Excellent'
+              },
+              {
+                image: '/images/WhatsApp Image 2025-12-22 at 16.12.56.jpeg',
+                title: '2025 Import - Vehicle 8',
+                price: '$42,000',
+                specs: 'Imported December 2025',
+                condition: 'Grade 4B - Excellent'
+              },
+              {
+                image: '/images/WhatsApp Image 2025-12-22 at 16.13.17.jpeg',
+                title: '2025 Import - Vehicle 9',
+                price: '$44,000',
+                specs: 'Imported December 2025',
+                condition: 'Grade 4B - Excellent'
+              },
+              {
+                image: '/images/WhatsApp Image 2025-12-22 at 16.13.45.jpeg',
+                title: '2025 Import - Vehicle 10',
+                price: '$49,000',
+                specs: 'Imported December 2025',
+                condition: 'Grade 4B - Excellent'
+              },
+              {
+                image: '/images/WhatsApp Image 2025-12-22 at 16.14.02.jpeg',
+                title: '2025 Import - Vehicle 11',
+                price: '$41,500',
+                specs: 'Imported December 2025',
+                condition: 'Grade 4B - Excellent'
+              },
+              {
+                image: '/images/WhatsApp Image 2025-12-22 at 16.14.32.jpeg',
+                title: '2025 Import - Vehicle 12',
+                price: '$43,000',
+                specs: 'Imported December 2025',
+                condition: 'Grade 4B - Excellent'
+              }
+            ].map((vehicle, index) => (
               <motion.div
                 key={index}
-                className="relative overflow-hidden rounded-xl group"
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
+                className="group relative bg-[#0F1614] rounded-2xl overflow-hidden border border-[#25614F]/20 hover:border-[#25614F]/50 transition-all duration-500"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ y: -5 }}
               >
-                <img
-                  src={image}
-                  alt={`Past import ${index + 1}`}
-                  className="w-full h-48 object-cover transform group-hover:scale-110 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                {/* Image Container */}
+                <div className="relative overflow-hidden">
+                  <img
+                    src={vehicle.image}
+                    alt={vehicle.title}
+                    className="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-700"
+                  />
+                  
+                  {/* Overlay Gradient */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+                  
+                  {/* Price Badge */}
+                  <div className="absolute top-4 left-4 bg-[#25614F] text-[#EAE2D6] px-3 py-1 rounded-full text-sm font-bold">
+                    {vehicle.price}
+                  </div>
+                  
+                  {/* Condition Badge */}
+                  <div className="absolute top-4 right-4 bg-[#0F1614]/90 text-[#BDB6AD] px-3 py-1 rounded-full text-sm border border-[#25614F]/30">
+                    {vehicle.condition}
+                  </div>
+                </div>
+                
+                {/* Vehicle Details */}
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-[#EAE2D6] mb-2 group-hover:text-[#A88F5C] transition-colors duration-300">
+                    {vehicle.title}
+                  </h3>
+                  <p className="text-[#BDB6AD] text-sm mb-4">
+                    {vehicle.specs}
+                  </p>
+                  
+                  {/* Hover Details */}
+                  <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="flex justify-between items-center">
+                      <span className="text-[#25614F] font-semibold text-sm">View Details</span>
+                      <svg className="w-4 h-4 text-[#25614F]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
               </motion.div>
             ))}
           </div>
+          
+          {/* CTA Section */}
+          <motion.div
+            className="text-center mt-16"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+          >
+            <div className="bg-gradient-to-r from-[#25614F]/20 via-[#25614F]/30 to-[#25614F]/20 rounded-3xl p-10 border border-[#25614F]/30">
+              <h3 className="text-3xl font-bold text-[#EAE2D6] mb-4">
+                Ready to Import Your Dream Car?
+              </h3>
+              <p className="text-[#BDB6AD] text-lg mb-8 max-w-2xl mx-auto">
+                Let us help you find the perfect vehicle from Japan. We'll guide you through every step of the import process.
+              </p>
+              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                <Link
+                  href="/contact-us"
+                  className="bg-[#25614F] text-[#EAE2D6] px-12 py-5 rounded-full font-bold text-lg hover:bg-[#1e4f3f] transition-all duration-300 inline-flex items-center gap-3 shadow-xl"
+                >
+                  <span>Get in Touch</span>
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </Link>
+              </motion.div>
+            </div>
+          </motion.div>
         </div>
       </section>
     </div>

@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 export default function Calculator() {
   // User-editable fields
-  const [fobPrice, setFobPrice] = useState<number>(30000);
+  const [fobPrice, setFobPrice] = useState<string>('30000');
   const [importDuty, setImportDuty] = useState<number>(0);
 
   // Fixed values
@@ -17,9 +17,13 @@ export default function Calculator() {
 
   // Auto-calculated values
   const calculations = useMemo(() => {
-    const dutyAmount = fobPrice * (importDuty / 100);
-    const gst = 0.10 * (fobPrice + SHIPPING_CHARGES + dutyAmount);
-    const totalCost = fobPrice + dutyAmount + SHIPPING_CHARGES + gst + LOCAL_TRANSPORT + COMPLIANCE_COST + SERVICE_FEE;
+    // Remove any non-numeric characters except decimal point, then parse
+    const cleanedFobPrice = fobPrice.replace(/[^\d.]/g, '');
+    const fobPriceNum = parseFloat(cleanedFobPrice) || 0;
+    
+    const dutyAmount = fobPriceNum * (importDuty / 100);
+    const gst = 0.10 * (fobPriceNum + SHIPPING_CHARGES + dutyAmount);
+    const totalCost = fobPriceNum + dutyAmount + SHIPPING_CHARGES + gst + LOCAL_TRANSPORT + COMPLIANCE_COST + SERVICE_FEE;
 
     return {
       dutyAmount,
@@ -29,12 +33,7 @@ export default function Calculator() {
   }, [fobPrice, importDuty]);
 
   const formatCurrency = (value: number) => {
-    return new Intl.NumberFormat('en-AU', {
-      style: 'currency',
-      currency: 'AUD',
-      minimumFractionDigits: 0,
-      maximumFractionDigits: 0
-    }).format(value);
+    return `AUD $${value.toLocaleString()}`;
   };
 
   const fadeInUp = {
@@ -111,6 +110,56 @@ export default function Calculator() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
+            {/* How It Works Section */}
+            <div className="text-center mb-16">
+              <motion.div
+                className="inline-flex items-center justify-center w-20 h-20 bg-[#25614F] rounded-full mb-8 shadow-xl"
+                whileHover={{ scale: 1.1, rotate: 10 }}
+              >
+                <svg className="w-10 h-10 text-[#EAE2D6]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+              </motion.div>
+              <h2 className="text-4xl md:text-5xl font-bold font-heading mb-6 text-[#EAE2D6]">
+                How It Works
+              </h2>
+              <div className="w-24 h-1 bg-[#25614F] mx-auto rounded-full mb-4"></div>
+              <div className="w-16 h-1 bg-[#25614F]/50 mx-auto rounded-full mb-8"></div>
+              
+              <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                {[
+                  {
+                    step: 'Step 1',
+                    title: 'Enter Your Details',
+                    description: 'Input your vehicle price and select the country of manufacture to calculate duty rates.'
+                  },
+                  {
+                    step: 'Step 2',
+                    title: 'Get Your Quote',
+                    description: 'Our calculator automatically computes all import costs including GST, shipping, and compliance fees.'
+                  },
+                  {
+                    step: 'Step 3',
+                    title: 'Book Your Vehicle',
+                    description: 'Contact us with your quote to start the import process with full cost transparency.'
+                  }
+                ].map((item, index) => (
+                  <motion.div
+                    key={index}
+                    className="bg-[#1a2420] rounded-xl p-6 border border-[#25614F]/20 hover:border-[#25614F]/40 transition-all"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                  >
+                    <div className="text-[#25614F] font-bold text-lg mb-2">{item.step}</div>
+                    <h3 className="text-[#EAE2D6] font-semibold mb-3">{item.title}</h3>
+                    <p className="text-[#BDB6AD] text-sm leading-relaxed">{item.description}</p>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+
             {/* Calculator Intro */}
             <div className="text-center mb-16">
               <motion.div
@@ -151,15 +200,35 @@ export default function Calculator() {
                     <div className="relative">
                       <span className="absolute left-4 top-1/2 -translate-y-1/2 text-[#BDB6AD] text-lg">$</span>
                       <input
-                        type="number"
+                        type="text"
                         value={fobPrice}
                         onChange={(e) => {
-                          const value = e.target.value.replace(/^0+/, ''); // Remove leading zeros
-                          setFobPrice(Math.max(0, Number(value || 0)));
+                          const value = e.target.value;
+                          // Validate to only allow numbers, commas and periods
+                          const regex = /^[0-9,.]*$/;
+                          if (value === '' || regex.test(value)) {
+                            setFobPrice(value);
+                          }
+                        }}
+                        onBlur={() => {
+                          // Clean up and format on blur
+                          if (fobPrice === '') {
+                            setFobPrice('0');
+                            return;
+                          }
+                          
+                          // Format the value properly with commas for thousands
+                          // First remove all non-numeric characters except decimal point
+                          const cleanValue = fobPrice.replace(/[^0-9.]/g, '');
+                          // Ensure only one decimal point
+                          const parts = cleanValue.split('.');
+                          // Format with commas for thousands
+                          const numberPart = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+                          const formattedValue = numberPart + (parts.length > 1 ? '.' + parts[1] : '');
+                          setFobPrice(formattedValue);
                         }}
                         className="w-full bg-[#1a2420] border-2 border-[#25614F]/40 rounded-xl pl-10 pr-4 py-4 text-[#EAE2D6] text-xl font-semibold placeholder-[#BDB6AD]/50 focus:border-[#25614F] focus:outline-none focus:ring-2 focus:ring-[#25614F]/30 transition-all"
                         placeholder="30000"
-                        min="0"
                       />
                     </div>
                   </div>
@@ -196,7 +265,7 @@ export default function Calculator() {
                         whileTap={{ scale: 0.95 }}
                       >
                         5%
-                        <span className="block text-sm font-normal mt-1 opacity-80">European/UK</span>
+                        <span className="block text-sm font-normal mt-1 opacity-80">Non Japanese built</span>
                       </motion.button>
                     </div>
                   </div>

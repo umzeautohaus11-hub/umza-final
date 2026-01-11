@@ -83,20 +83,20 @@ export default function AboutUs() {
             </div>
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 bg-[#25614F] rounded-full"></div>
-              <span>REALISTIC EXPECTATIONS</span>
+              <span>Realistic Expectations</span>
             </div>
           </motion.div>
         </div>
       </section>
 
-      {/* Founder Story - Flowing Content */}
+      {/* Founder Story - Modern Visual Storytelling */}
       <section id="story" className="py-32 bg-[#0F1614] relative overflow-hidden">
         {/* Flowing Background */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-0 right-1/4 w-96 h-96 bg-[#25614F] rounded-full blur-3xl"></div>
         </div>
 
-        <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="text-center mb-20"
             initial={{ opacity: 0, y: 30 }}
@@ -116,92 +116,153 @@ export default function AboutUs() {
             <div className="w-16 h-1 bg-[#25614F]/50 mx-auto rounded-full"></div>
           </motion.div>
 
-          <motion.div
-            className="space-y-8"
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-          >
-            {/* Opening Statement */}
+          {/* Modern Storytelling Layout */}
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            {/* Left Column - Visual Timeline */}
             <motion.div
-              className="text-center"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              className="space-y-8"
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
+              transition={{ duration: 0.8 }}
             >
-              <p className="text-3xl md:text-4xl text-[#EAE2D6] font-light italic">
-                "It started with a passion, not a business plan."
-              </p>
-            </motion.div>
-
-            {/* Story Content - Flowing Without Boxes */}
-            <div className="space-y-10 pt-12">
-              {[
-                "In 2012, the founder's father began importing vehicles from Japan not as a business venture, but driven by a genuine appreciation for Japanese cars and an understanding of the value they offered Australian buyers.",
-                
-                "Seven years later, in 2019, the founder imported his first car: a Toyota Chaser. That experience opened his eyes to the real value of Japanese imports. The car was in significantly better condition than anything available locally, and the savings were substantial.",
-                
-                "That first import revealed what others often overlook: auction grades alone don\'t tell the full story. True vehicle condition requires careful analysis of photos, physical inspections, underbody checks, rust points, engine bay signs, and overall presentation.",
-                
-                "What began as helping mates and family quickly grew into something more. The founder personally handled every aspect - translating auction sheets, researching exporters, reviewing condition reports, and providing end-to-end guidance. The process was built on real experience, not textbook knowledge."
-              ].map((text, index) => (
-                <motion.div
-                  key={index}
-                  className="relative pl-8 md:pl-12"
-                  initial={{ opacity: 0, x: -30 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                >
-                  {/* Timeline Dot */}
-                  <div className="absolute left-0 top-2 w-4 h-4 bg-[#25614F] rounded-full shadow-lg"></div>
-                  <div className="absolute left-2 top-6 w-px h-full bg-gradient-to-b from-[#25614F]/50 to-transparent"></div>
-                  
-                  <p className="text-[#BDB6AD] text-lg leading-relaxed">
-                    {text}
-                  </p>
-                </motion.div>
-              ))}
-              
-              {/* Additional bullet point */}
               <motion.div
-                className="relative pl-8 md:pl-12"
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.4 }}
-              >
-                {/* Timeline Dot */}
-                <div className="absolute left-0 top-2 w-4 h-4 bg-[#25614F] rounded-full shadow-lg"></div>
-                <div className="absolute left-2 top-6 w-px h-full bg-gradient-to-b from-[#25614F]/50 to-transparent"></div>
-                
-                <p className="text-[#BDB6AD] text-lg leading-relaxed">
-                  Today, that same attention to detail and honest process is applied to every vehicle sourced, so clients know exactly what they're buying.
-                </p>
-              </motion.div>
-
-              {/* Closing Statement */}
-              <motion.div
-                className="pt-8 text-center"
+                className="text-center mb-12"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: 0.4 }}
+                transition={{ duration: 0.6 }}
               >
-                <div className="inline-block bg-gradient-to-r from-[#25614F]/20 via-[#25614F]/30 to-[#25614F]/20 px-12 py-8 rounded-3xl">
-                  <p className="text-[#EAE2D6] font-semibold text-xl md:text-2xl max-w-3xl">
-                    UMZE Autohaus was built on those same principles: real experience, honesty, transparency, and genuine care for each client.
-                  </p>
-                </div>
+                <p className="text-3xl md:text-4xl text-[#EAE2D6] font-light italic mb-8">
+                  "It started with a passion, not a business plan."
+                </p>
               </motion.div>
-            </div>
+
+              {/* Interactive Timeline */}
+              <div className="space-y-8">
+                {[
+                  {
+                    year: "2012",
+                    title: "The Beginning",
+                    description: "The founder's father began importing vehicles from Japan, driven by a genuine appreciation for Japanese cars and their value.",
+                    icon: "🚗"
+                  },
+                  {
+                    year: "2019",
+                    title: "First Import",
+                    description: "The founder imported his first car: a Toyota Chaser, revealing the true value of Japanese imports.",
+                    icon: "📦"
+                  },
+                  {
+                    year: "2020",
+                    title: "Growth",
+                    description: "What began as helping friends grew into a full-service import business built on real experience.",
+                    icon: "📈"
+                  },
+                  {
+                    year: "Today",
+                    title: "Our Mission",
+                    description: "Continuing the tradition of honesty, transparency, and genuine care for each client.",
+                    icon: "🎯"
+                  }
+                ].map((item, index) => (
+                  <motion.div
+                    key={index}
+                    className="relative pl-12 group"
+                    initial={{ opacity: 0, x: -30 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    whileHover={{ x: 5 }}
+                  >
+                    {/* Timeline Line */}
+                    <div className="absolute left-4 top-0 w-px h-full bg-gradient-to-b from-[#25614F] to-transparent"></div>
+                    
+                    {/* Year Badge */}
+                    <div className="absolute left-0 top-2 w-8 h-8 bg-[#25614F] rounded-full flex items-center justify-center shadow-lg">
+                      <span className="text-xs font-bold text-[#EAE2D6]">{item.icon}</span>
+                    </div>
+                    
+                    {/* Content */}
+                    <div className="bg-[#1C1C1C]/50 rounded-xl p-4 border border-[#25614F]/20 group-hover:border-[#25614F]/40 transition-all">
+                      <div className="text-[#25614F] font-bold mb-1">{item.year}</div>
+                      <h3 className="text-[#EAE2D6] font-semibold mb-2">{item.title}</h3>
+                      <p className="text-[#BDB6AD] text-sm leading-relaxed">{item.description}</p>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
+
+            {/* Right Column - Visual Story */}
+            <motion.div
+              className="relative"
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
+              <div className="relative bg-gradient-to-br from-[#25614F]/10 to-[#1e4f3f]/10 rounded-3xl overflow-hidden border border-[#25614F]/30">
+                <div className="absolute inset-0 bg-gradient-to-br from-[#25614F]/20 to-transparent"></div>
+                <div className="relative p-8 z-10">
+                  <img
+                    src="/images/06 Honda NSX - credit Honda copy.jpg"
+                    alt="Our Story Visual"
+                    className="w-full h-80 object-cover rounded-2xl mb-6"
+                  />
+                  <div className="text-center">
+                    <h3 className="text-2xl font-bold text-[#EAE2D6] mb-4">
+                      Built on Real Experience
+                    </h3>
+                    <p className="text-[#BDB6AD] leading-relaxed">
+                      UMZE Autohaus was built on principles of real experience, honesty, transparency, and genuine care for each client.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+
+          {/* Key Principles Section */}
+          <motion.div
+            className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+          >
+            {[
+              {
+                title: "Transparency",
+                description: "Clear communication and honest advice throughout the entire import process.",
+                icon: "🔍"
+              },
+              {
+                title: "Expertise",
+                description: "Real auction experience and detailed vehicle analysis beyond grades.",
+                icon: "🎓"
+              },
+              {
+                title: "Client Care",
+                description: "Personalized guidance and support for every client's unique needs.",
+                icon: "🤝"
+              }
+            ].map((principle, index) => (
+              <motion.div
+                key={index}
+                className="bg-[#1C1C1C]/50 rounded-xl p-6 border border-[#25614F]/20 hover:border-[#25614F]/40 transition-all"
+                whileHover={{ y: -5 }}
+              >
+                <div className="text-4xl mb-4">{principle.icon}</div>
+                <h4 className="text-xl font-bold text-[#EAE2D6] mb-3">{principle.title}</h4>
+                <p className="text-[#BDB6AD] text-sm leading-relaxed">{principle.description}</p>
+              </motion.div>
+            ))}
           </motion.div>
         </div>
       </section>
 
-      {/* Why Japan - Split Design */}
+      {/* Why Japan - Enhanced Visual Section */}
       <section className="py-32 bg-carbon relative overflow-hidden">
         {/* Background Element */}
         <div className="absolute inset-0 opacity-10">
@@ -230,7 +291,7 @@ export default function AboutUs() {
               <div className="w-24 h-1 bg-[#25614F] rounded-full mb-8"></div>
               
               <p className="text-2xl text-[#EAE2D6] font-light leading-relaxed mb-6">
-                Japanese vehicles stand apart because of how they\'re maintained, not just how they\'re built.
+                Japanese vehicles stand apart because of how they're maintained, not just how they're built.
               </p>
             </motion.div>
 
@@ -252,7 +313,7 @@ export default function AboutUs() {
               <div className="relative pl-8">
                 <div className="absolute left-0 top-0 w-1 h-full bg-gradient-to-b from-[#25614F] to-transparent rounded-full"></div>
                 <p className="text-[#BDB6AD] text-lg leading-relaxed">
-                  Beyond condition, there\'s access. Japan offers models, specifications, and special editions that simply aren\'t available in the Australian market - including JDM classics, performance vehicles, and collector cars that retain their value.
+                  Beyond condition, there's access. Japan offers models, specifications, and special editions that simply aren't available in the Australian market - including JDM classics, performance vehicles, and collector cars that retain their value.
                 </p>
               </div>
             </motion.div>
@@ -260,7 +321,7 @@ export default function AboutUs() {
         </div>
       </section>
 
-      {/* What Makes Us Different - Icon Flow */}
+      {/* What Makes Us Different - Enhanced Icon Flow */}
       <section id="why-us" className="py-32 bg-[#0F1614] relative overflow-hidden">
         {/* Background Elements */}
         <div className="absolute inset-0 opacity-10">
@@ -308,7 +369,7 @@ export default function AboutUs() {
                   </svg>
                 ),
                 title: 'Real Savings, No Hidden Costs',
-                description: 'We help you understand exactly what you\'re paying for - vehicle price, shipping, taxes, compliance, and registration. No surprise fees, no unclear breakdowns. Just clear expectations from start to finish.'
+                description: "We help you understand exactly what you're paying for - vehicle price, shipping, taxes, compliance, and registration. No surprise fees, no unclear breakdowns. Just clear expectations from start to finish."
               },
               {
                 icon: (
@@ -317,7 +378,7 @@ export default function AboutUs() {
                   </svg>
                 ),
                 title: 'Personal Guidance, Every Step',
-                description: 'You\'re not handed off to a faceless system. We translate auction sheets, review condition reports, explain what\'s important, and keep you informed throughout the entire import process.'
+                description: "You're not handed off to a faceless system. We translate auction sheets, review condition reports, explain what's important, and keep you informed throughout the entire import process."
               },
               {
                 icon: (
@@ -325,8 +386,8 @@ export default function AboutUs() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 ),
-                title: 'We Don\'t Cut Corners',
-                description: 'Our focus is helping you import safely and confidently. We won\'t push you toward a bad deal or skip important checks to close a sale. Your long-term satisfaction matters more than a quick transaction.'
+                title: "We Don't Cut Corners",
+                description: "Our focus is helping you import safely and confidently. We won't push you toward a bad deal or skip important checks to close a sale. Your long-term satisfaction matters more than a quick transaction."
               }
             ].map((feature, index) => (
               <motion.div
@@ -367,7 +428,7 @@ export default function AboutUs() {
         </div>
       </section>
 
-      {/* Experience & Vehicle Range - Horizontal Flow */}
+      {/* Experience & Vehicle Range - Enhanced Flow */}
       <section className="py-32 bg-carbon relative overflow-hidden">
         <div className="absolute inset-0 opacity-5">
           <div className="absolute inset-0" style={{
@@ -447,7 +508,7 @@ export default function AboutUs() {
             {[
               { number: '100+', label: 'Vehicles Imported' },
               { number: '2012', label: 'Journey Began' },
-              { number: '2019', label: 'Founder\'s First Import' },
+              { number: '2019', label: "Founder's First Import" },
               { number: '100%', label: 'Transparency' }
             ].map((stat, index) => (
               <motion.div
@@ -531,7 +592,7 @@ export default function AboutUs() {
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            Let\'s discuss your requirements and find the right vehicle for you.
+            Let's discuss your requirements and find the right vehicle for you.
           </motion.p>
           <motion.div
             className="flex flex-col sm:flex-row gap-6 justify-center"
@@ -567,7 +628,7 @@ export default function AboutUs() {
             transition={{ duration: 0.8, delay: 0.6 }}
           >
             <motion.a
-              href="https://www.google.com/search?q=umze+autohaus&rlz=1C5CHFA_enAU1014AU1014&oq=umze+autohaus&aqs=chrome..69i57j0i22i30l2j0i15i22i30j0i22i30l2.1234j0j7&sourceid=chrome&ie=UTF-8#lrd=0x6ad642bf0d2e4b8d:0x1b0b0b0b0b0b0b0b,1,,,,"
+              href="https://share.google/Ch858CdwF3raEktou"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-3 bg-[#EAE2D6] text-[#25614F] px-8 py-4 rounded-xl font-bold hover:bg-white transition-all duration-300 shadow-lg hover:shadow-xl"

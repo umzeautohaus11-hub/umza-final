@@ -6,7 +6,7 @@ export default function ViewAuctions() {
   const auctions = [
     {
       name: 'USS Auctions',
-      description: 'Japan\'s largest auction network with over 200 locations',
+      description: "Japan's largest auction network with over 200 locations",
       logo: 'USS',
       url: 'https://www.uss-auction.jp',
       features: ['Live bidding', 'English support', 'Grade A vehicles', 'Global shipping']

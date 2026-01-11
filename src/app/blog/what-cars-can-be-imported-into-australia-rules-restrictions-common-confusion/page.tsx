@@ -10,8 +10,8 @@ export default function WhatCarsCanBeImportedIntoAustraliaRulesRestrictionsCommo
       <section className="relative text-white h-screen flex items-center overflow-hidden -mt-20 pt-20">
         <div className="absolute inset-0">
           <img
-            src="/images/hero-bg.jpg"
-            alt="Australian vehicle import rules"
+            src="/images/WhatsApp Image 2025-12-22 at 16.14.32.jpeg"
+            alt="Australian vehicle import rules and regulations"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/70 to-black/80"></div>

@@ -16,7 +16,7 @@ export default function HowToReadAuctionSheet() {
       <section className="relative text-white h-screen flex items-center overflow-hidden -mt-20 pt-20">
         <div className="absolute inset-0">
           <img
-            src="/images/hero-bg.jpg"
+            src="/images/2011-Mercedes-Benz-S63-AMG-L-Collecting-Cars-01-11-2025-Ari-Gelgec23.avif"
             alt="How to read Japanese auction sheet"
             className="w-full h-full object-cover animate-ken-burns"
           />
@@ -111,7 +111,7 @@ export default function HowToReadAuctionSheet() {
 
             <div className="space-y-6">
               {[
-                { title: 'Overall Condition', desc: 'The main grade that summarises the vehicle\'s overall state' },
+                { title: 'Overall Condition', desc: "The main grade that summarises the vehicle's overall state" },
                 { title: 'Interior Condition', desc: 'How the inside of the car looks and feels' },
                 { title: 'Vehicle Features & Options', desc: 'What equipment and extras the car has' },
                 { title: 'Vehicle Diagram', desc: 'A map showing where damage or repairs are located' }
@@ -383,7 +383,7 @@ export default function HowToReadAuctionSheet() {
                 },
                 {
                   mistake: 'Ignoring Comments',
-                  desc: 'Skipping the handwritten notes. These often reveal important issues that aren\'t in the standard codes.'
+                  desc: "Skipping the handwritten notes. These often reveal important issues that aren't in the standard codes."
                 },
                 {
                   mistake: 'Underestimating Repair Costs',
@@ -415,7 +415,7 @@ export default function HowToReadAuctionSheet() {
               {[
                 {
                   title: 'Complete Auction Sheet Translation',
-                  desc: 'Every code, comment, and diagram is explained in plain English. We ensure you understand exactly what you\'re looking at.'
+                  desc: "Every code, comment, and diagram is explained in plain English. We ensure you understand exactly what you're looking at."
                 },
                 {
                   title: 'Additional Photo Requests',
@@ -423,11 +423,11 @@ export default function HowToReadAuctionSheet() {
                 },
                 {
                   title: 'Risk Assessment',
-                  desc: 'We highlight potential issues and provide our professional assessment. You\'ll know exactly what you\'re getting into.'
+                  desc: "We highlight potential issues and provide our professional assessment. You'll know exactly what you're getting into."
                 },
                 {
                   title: 'Peace of Mind',
-                  desc: 'Our goal is to help you make informed decisions. With our support, you can bid with confidence knowing you\'ve seen the full picture.'
+                  desc: "Our goal is to help you make informed decisions. With our support, you can bid with confidence knowing you've seen the full picture."
                 }
               ].map((item, index) => (
                 <div key={index} className="bg-gradient-to-r from-[#25614F]/20 to-[#25614F]/10 rounded-xl p-6 border border-[#25614F]/30">

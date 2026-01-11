@@ -18,12 +18,12 @@ const Header = () => {
 
   const navItems = [
     { href: '/', label: 'Home' },
-    { href: '/about-us', label: 'About' },
-    { href: '/blog', label: 'Blog' },
+    { href: '/about-us', label: 'About Us' },
+    { href: '/vehicles-for-import', label: 'Our Import/Catalogue' },
     { href: '/import-process', label: 'Our Process' },
     { href: '/calculator', label: 'Calculator' },
-    { href: '/faqs', label: 'FAQs' },
-    { href: '/contact-us', label: 'Contact' },
+    { href: '/blog', label: 'Blogs' },
+    { href: '/contact-us', label: 'Contact Us' },
   ];
 
   return (

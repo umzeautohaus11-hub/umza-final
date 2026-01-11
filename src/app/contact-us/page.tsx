@@ -57,7 +57,7 @@ export default function ContactUs() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.6 }}
           >
-            Ready to import your dream car from Japan? Let\'s discuss your requirements.
+            Ready to import your dream car from Japan? Let's discuss your requirements.
           </motion.p>
         </div>
       </section>
@@ -90,7 +90,7 @@ export default function ContactUs() {
                   <h2 className="text-3xl font-bold font-heading text-[#EAE2D6]">
                     Send Us a Message
                   </h2>
-                  <p className="text-[#BDB6AD]">We\'ll respond within 24 hours</p>
+                  <p className="text-[#BDB6AD]">We'll respond within 24 hours</p>
                 </div>
               </div>
 
@@ -232,8 +232,8 @@ export default function ContactUs() {
                           </svg>
                         ),
                         title: 'Phone',
-                        value: '+61 404 312 508',
-                        link: 'tel:+61404312508'
+                        value: '+61 420 790 798',
+                        link: 'tel:+61420790798'
                       },
                       {
                         icon: (
@@ -287,7 +287,7 @@ export default function ContactUs() {
                     {[
                       { name: 'Facebook', icon: '📘', link: 'https://facebook.com/umzeautohaus' },
                       { name: 'Instagram', icon: '📷', link: 'https://instagram.com/umzeautohaus' },
-                      { name: 'TikTok', icon: '🎥', link: 'https://tiktok.com/@umzeautohaus' },
+                      { name: 'TikTok', icon: '🎥', link: 'https://www.tiktok.com/@umze.autohaus?_r=1&_t=ZS-92yZzPXKEum' },
                       { name: 'Email', icon: '✉️', link: 'mailto:info@umzeautohaus.com' }
                     ].map((social, index) => (
                       <motion.a
@@ -362,7 +362,7 @@ export default function ContactUs() {
               <span className="relative z-10">Start Import Process</span>
             </motion.a>
             <motion.a
-              href="tel:+61404312508"
+              href="tel:+61420790798"
               className="border-2 border-[#EAE2D6] text-[#EAE2D6] px-12 py-5 rounded-full font-bold text-lg hover:bg-[#EAE2D6]/10 backdrop-blur-sm transition-all duration-300"
               whileHover={{ scale: 1.05, y: -3 }}
               whileTap={{ scale: 0.95 }}

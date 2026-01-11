@@ -1,16 +1,24 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import Link from 'next/link';
 
 export default function CarListing() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [searchTerm, setSearchTerm] = useState('');
+  const [filters, setFilters] = useState({
+    make: '',
+    model: '',
+    year: '',
+    priceRange: '',
+    condition: ''
+  });
 
   const vehicleImages = [
-    '/images/06 Honda NSX - credit Honda copy.jpg',
-    '/images/2007-Mercedes-Benz-S63-AMG-Collecting-Cars-06-08-2025-Ari-Gelgec20.avif',
-    '/images/2011-Mercedes-Benz-S63-AMG-L-Collecting-Cars-01-11-2025-Ari-Gelgec23.avif',
+    '/images/WhatsApp Image 2025-12-22 at 15.59.28.jpeg',
+    '/images/WhatsApp Image 2025-12-22 at 16.03.45.jpeg',
+    '/images/WhatsApp Image 2025-12-22 at 16.04.14.jpeg',
   ];
 
   const specifications = [
@@ -21,28 +29,161 @@ export default function CarListing() {
     { label: 'Fuel Type', value: 'Petrol' },
   ];
 
-  const dealerStock = [
+  const allVehicles = [
     {
+      id: 1,
       name: '1992 Mitsuoka Dore',
-      price: '$74,990',
+      price: 74990,
       image: '/images/2012-Mercedes-Benz-S63-AMG-Collecting-Cars-26-05-2025-Ari-Gelgec25.avif',
+      make: 'Mitsuoka',
+      model: 'Dore',
+      year: 1992,
+      condition: 'Grade 4B',
+      mileage: 131000,
+      transmission: 'Manual',
+      driveType: 'RWD',
+      fuelType: 'Petrol',
+      induction: 'N/A'
     },
     {
+      id: 2,
       name: '2023 Lexus IS500 F Sport',
-      price: '$88,300',
+      price: 88300,
       image: '/images/2012-Mercedes-Benz-S63-AMG-Collecting-Cars-26-05-2025-Ari-Gelgec75.avif',
+      make: 'Lexus',
+      model: 'IS500',
+      year: 2023,
+      condition: 'Grade 4B',
+      mileage: 85000,
+      transmission: 'Automatic',
+      driveType: 'RWD',
+      fuelType: 'Petrol',
+      induction: 'N/A'
     },
     {
+      id: 3,
       name: '2006 Subaru Impreza WRX WR-Limited',
-      price: '$26,500',
+      price: 26500,
       image: '/images/2012-Mercedes-Benz-S63-AMG-Collecting-Cars-26-05-2025-Ari-Gelgec78.avif',
+      make: 'Subaru',
+      model: 'Impreza WRX',
+      year: 2006,
+      condition: 'Grade 4B',
+      mileage: 125000,
+      transmission: 'Manual',
+      driveType: 'AWD',
+      fuelType: 'Petrol',
+      induction: 'Turbo'
     },
     {
+      id: 4,
       name: '2003 Honda Accord CL7 Euro R',
-      price: '$18,500',
+      price: 18500,
       image: '/images/2011-Mercedes-Benz-S63-AMG-L-Collecting-Cars-01-11-2025-Ari-Gelgec79.avif',
+      make: 'Honda',
+      model: 'Accord',
+      year: 2003,
+      condition: 'Grade 4B',
+      mileage: 145000,
+      transmission: 'Manual',
+      driveType: 'FWD',
+      fuelType: 'Petrol',
+      induction: 'N/A'
     },
+    {
+      id: 5,
+      name: '2019 Toyota Chaser Tourer V',
+      price: 32000,
+      image: '/images/2007-Mercedes-Benz-S63-AMG-Collecting-Cars-06-08-2025-Ari-Gelgec20.avif',
+      make: 'Toyota',
+      model: 'Chaser',
+      year: 2019,
+      condition: 'Grade 4B',
+      mileage: 95000,
+      transmission: 'Automatic',
+      driveType: 'RWD',
+      fuelType: 'Petrol',
+      induction: 'N/A'
+    },
+    {
+      id: 6,
+      name: '2015 Nissan Skyline GT-R',
+      price: 95000,
+      image: '/images/2011-Mercedes-Benz-S63-AMG-L-Collecting-Cars-01-11-2025-Ari-Gelgec23.avif',
+      make: 'Nissan',
+      model: 'Skyline GT-R',
+      year: 2015,
+      condition: 'Grade 4B',
+      mileage: 75000,
+      transmission: 'Automatic',
+      driveType: 'AWD',
+      fuelType: 'Petrol',
+      induction: 'Turbo'
+    }
   ];
+
+  // Filter vehicles based on search and filters
+  const filteredVehicles = useMemo(() => {
+    return allVehicles.filter(vehicle => {
+      // Search term filter (searches name, make, model)
+      const searchLower = searchTerm.toLowerCase();
+      const matchesSearch = !searchTerm ||
+        vehicle.name.toLowerCase().includes(searchLower) ||
+        vehicle.make.toLowerCase().includes(searchLower) ||
+        vehicle.model.toLowerCase().includes(searchLower);
+
+      // Make filter
+      const matchesMake = !filters.make || vehicle.make === filters.make;
+
+      // Model filter
+      const matchesModel = !filters.model || vehicle.model === filters.model;
+
+      // Year filter
+      const matchesYear = !filters.year || vehicle.year.toString() === filters.year;
+
+      // Price range filter
+      const matchesPrice = !filters.priceRange || (() => {
+        const price = vehicle.price;
+        switch(filters.priceRange) {
+          case 'under-20k': return price < 20000;
+          case '20k-40k': return price >= 20000 && price <= 40000;
+          case '40k-60k': return price >= 40000 && price <= 60000;
+          case '60k-80k': return price >= 60000 && price <= 80000;
+          case 'over-80k': return price > 80000;
+          default: return true;
+        }
+      })();
+
+      // Condition filter
+      const matchesCondition = !filters.condition || vehicle.condition === filters.condition;
+
+      return matchesSearch && matchesMake && matchesModel && matchesYear && matchesPrice && matchesCondition;
+    });
+  }, [searchTerm, filters]);
+
+  // Get unique values for filters
+  const makes = [...new Set(allVehicles.map(v => v.make))].sort();
+  const models = [...new Set(allVehicles.map(v => v.model))].sort();
+  const years = [...new Set(allVehicles.map(v => v.year))].sort((a, b) => b - a);
+  const conditions = [...new Set(allVehicles.map(v => v.condition))].sort();
+
+  const handleFilterChange = (key: string, value: string) => {
+    setFilters(prev => ({
+      ...prev,
+      [key]: value
+    }));
+  };
+
+  const resetFilters = () => {
+    setFilters({
+      make: '',
+      model: '',
+      year: '',
+      priceRange: '',
+      condition: ''
+    });
+    setSearchTerm('');
+  };
 
   const fadeInUp = {
     initial: { opacity: 0, y: 30 },
@@ -108,7 +249,7 @@ export default function CarListing() {
             {/* Sticky CTAs */}
             <div className="absolute top-4 right-4 flex flex-col gap-3">
               <a
-                href="tel:+61404312508"
+                href="tel:+61420790798"
                 className="bg-[#0A0A0A] text-white px-6 py-3 rounded-lg font-bold hover:bg-[#1C1C1C] transition-all shadow-lg"
               >
                 ⬛ Call: +61 404 312 508
@@ -232,6 +373,130 @@ export default function CarListing() {
           </p>
         </div>
 
+        {/* Search and Filter Section */}
+        <section className="py-16 bg-[#0F1614]">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            {/* Search Bar */}
+            <div className="mb-8">
+              <div className="relative">
+                <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                  <svg className="h-5 w-5 text-[#BDB6AD]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                  </svg>
+                </div>
+                <input
+                  type="text"
+                  placeholder="Search vehicles by name, make, or model..."
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                  className="w-full pl-10 pr-4 py-3 rounded-xl bg-[#1C1C1C] border border-[#25614F]/30 text-white placeholder-[#BDB6AD] focus:outline-none focus:border-[#25614F] focus:ring-1 focus:ring-[#25614F] transition-all"
+                />
+                {searchTerm && (
+                  <button
+                    onClick={() => setSearchTerm('')}
+                    className="absolute inset-y-0 right-0 pr-3 flex items-center text-[#BDB6AD] hover:text-white"
+                  >
+                    ✕
+                  </button>
+                )}
+              </div>
+            </div>
+
+            {/* Filter Controls */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 mb-8">
+              {/* Make Filter */}
+              <div>
+                <label className="block text-sm font-medium text-[#BDB6AD] mb-2">Make</label>
+                <select
+                  value={filters.make}
+                  onChange={(e) => handleFilterChange('make', e.target.value)}
+                  className="w-full px-3 py-2 rounded-lg bg-[#1C1C1C] border border-[#25614F]/30 text-white focus:outline-none focus:border-[#25614F] transition-all"
+                >
+                  <option value="">All Makes</option>
+                  {makes.map(make => (
+                    <option key={make} value={make}>{make}</option>
+                  ))}
+                </select>
+              </div>
+
+              {/* Model Filter */}
+              <div>
+                <label className="block text-sm font-medium text-[#BDB6AD] mb-2">Model</label>
+                <select
+                  value={filters.model}
+                  onChange={(e) => handleFilterChange('model', e.target.value)}
+                  className="w-full px-3 py-2 rounded-lg bg-[#1C1C1C] border border-[#25614F]/30 text-white focus:outline-none focus:border-[#25614F] transition-all"
+                >
+                  <option value="">All Models</option>
+                  {models.map(model => (
+                    <option key={model} value={model}>{model}</option>
+                  ))}
+                </select>
+              </div>
+
+              {/* Year Filter */}
+              <div>
+                <label className="block text-sm font-medium text-[#BDB6AD] mb-2">Year</label>
+                <select
+                  value={filters.year}
+                  onChange={(e) => handleFilterChange('year', e.target.value)}
+                  className="w-full px-3 py-2 rounded-lg bg-[#1C1C1C] border border-[#25614F]/30 text-white focus:outline-none focus:border-[#25614F] transition-all"
+                >
+                  <option value="">All Years</option>
+                  {years.map(year => (
+                    <option key={year} value={year}>{year}</option>
+                  ))}
+                </select>
+              </div>
+
+              {/* Price Range Filter */}
+              <div>
+                <label className="block text-sm font-medium text-[#BDB6AD] mb-2">Price Range</label>
+                <select
+                  value={filters.priceRange}
+                  onChange={(e) => handleFilterChange('priceRange', e.target.value)}
+                  className="w-full px-3 py-2 rounded-lg bg-[#1C1C1C] border border-[#25614F]/30 text-white focus:outline-none focus:border-[#25614F] transition-all"
+                >
+                  <option value="">All Prices</option>
+                  <option value="under-20k">Under $20,000</option>
+                  <option value="20k-40k">$20,000 - $40,000</option>
+                  <option value="40k-60k">$40,000 - $60,000</option>
+                  <option value="60k-80k">$60,000 - $80,000</option>
+                  <option value="over-80k">Over $80,000</option>
+                </select>
+              </div>
+
+              {/* Condition Filter */}
+              <div>
+                <label className="block text-sm font-medium text-[#BDB6AD] mb-2">Condition</label>
+                <select
+                  value={filters.condition}
+                  onChange={(e) => handleFilterChange('condition', e.target.value)}
+                  className="w-full px-3 py-2 rounded-lg bg-[#1C1C1C] border border-[#25614F]/30 text-white focus:outline-none focus:border-[#25614F] transition-all"
+                >
+                  <option value="">All Conditions</option>
+                  {conditions.map(condition => (
+                    <option key={condition} value={condition}>{condition}</option>
+                  ))}
+                </select>
+              </div>
+            </div>
+
+            {/* Reset Filters */}
+            <div className="flex justify-between items-center mb-6">
+              <div className="text-[#BDB6AD]">
+                Showing {filteredVehicles.length} of {allVehicles.length} vehicles
+              </div>
+              <button
+                onClick={resetFilters}
+                className="px-4 py-2 text-sm text-[#25614F] hover:text-[#1e4f3f] border border-[#25614F]/50 rounded-lg hover:bg-[#25614F]/10 transition-all"
+              >
+                Reset Filters
+              </button>
+            </div>
+          </div>
+        </section>
+
         {/* More Vehicles From Dealer Stock */}
         <motion.section
           className="mb-12"
@@ -242,9 +507,9 @@ export default function CarListing() {
         >
           <h2 className="text-3xl font-bold text-[#0A0A0A] mb-8">More Vehicles From Dealer Stock</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {dealerStock.map((vehicle, index) => (
+            {filteredVehicles.map((vehicle) => (
               <motion.div
-                key={index}
+                key={vehicle.id}
                 className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border border-[#A9AAAE]/20 group"
                 whileHover={{ y: -5 }}
               >
@@ -254,12 +519,25 @@ export default function CarListing() {
                     alt={vehicle.name}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                   />
+                  <div className="absolute top-2 left-2 bg-[#004B3A] text-white px-2 py-1 rounded text-xs font-semibold">
+                    {vehicle.year}
+                  </div>
+                  <div className="absolute top-2 right-2 bg-[#66E5C4] text-[#0A0A0A] px-2 py-1 rounded text-xs font-semibold">
+                    {vehicle.condition}
+                  </div>
                 </div>
                 <div className="p-4">
-                  <h3 className="font-bold text-[#0A0A0A] mb-2">{vehicle.name}</h3>
-                  <p className="text-2xl font-bold text-[#66E5C4] mb-4">{vehicle.price}</p>
+                  <h3 className="font-bold text-[#0A0A0A] mb-1">{vehicle.name}</h3>
+                  <p className="text-sm text-[#A9AAAE] mb-2">{vehicle.make} • {vehicle.model}</p>
+                  <p className="text-2xl font-bold text-[#66E5C4] mb-3">${vehicle.price.toLocaleString()}</p>
+                  <div className="grid grid-cols-2 gap-2 text-xs text-[#A9AAAE] mb-4">
+                    <span>• {vehicle.transmission}</span>
+                    <span>• {vehicle.driveType}</span>
+                    <span>• {vehicle.mileage.toLocaleString()} km</span>
+                    <span>• {vehicle.fuelType}</span>
+                  </div>
                   <Link
-                    href="/car-listing"
+                    href={`/car-listing/${vehicle.id}`}
                     className="text-[#004B3A] hover:text-[#66E5C4] font-semibold transition-colors inline-flex items-center"
                   >
                     View Details →
@@ -267,6 +545,19 @@ export default function CarListing() {
                 </div>
               </motion.div>
             ))}
+            {filteredVehicles.length === 0 && (
+              <div className="col-span-full text-center py-12">
+                <div className="text-6xl mb-4">🚗</div>
+                <h3 className="text-2xl font-bold text-[#A9AAAE] mb-2">No vehicles found</h3>
+                <p className="text-[#A9AAAE]/70">Try adjusting your filters or search terms</p>
+                <button
+                  onClick={resetFilters}
+                  className="mt-4 px-4 py-2 text-sm text-[#25614F] hover:text-[#1e4f3f] border border-[#25614F]/50 rounded-lg hover:bg-[#25614F]/10 transition-all"
+                >
+                  Clear All Filters
+                </button>
+              </div>
+            )}
           </div>
         </motion.section>
 
@@ -346,7 +637,7 @@ export default function CarListing() {
               Instagram
             </a>
             <a
-              href="https://tiktok.com/@umzeautohaus"
+              href="https://www.tiktok.com/@umze.autohaus?_r=1&_t=ZS-92yZzPXKEum"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 bg-[#004B3A] text-white px-6 py-3 rounded-lg hover:bg-[#66E5C4] hover:text-[#0A0A0A] transition-all"

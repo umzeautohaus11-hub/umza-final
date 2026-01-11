@@ -49,7 +49,7 @@ export default function ImportProcess() {
     {
       number: 7,
       title: "Final Delivery",
-      description: "Car is delivered to you or picked up in Melbourne",
+      description: "Car is delivered to you or picked up in Australia",
       details: "Includes post-delivery support.",
       icon: "🏁"
     }
@@ -126,7 +126,7 @@ export default function ImportProcess() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.6 }}
           >
-            From vehicle search to delivery in Melbourne we handle everything.
+            From vehicle search to delivery in Australia we handle everything.
           </motion.p>
 
           <motion.div
@@ -337,7 +337,7 @@ export default function ImportProcess() {
                 transition={{ duration: 0.8 }}
               >
                 <div className="bg-gradient-to-br from-[#25614F]/10 to-[#25614F]/5 rounded-2xl p-8 border border-[#25614F]/30">
-                  <h4 className="text-2xl font-bold text-[#EAE2D6] mb-6">What\'s Included</h4>
+                  <h4 className="text-2xl font-bold text-[#EAE2D6] mb-6">What's Included</h4>
                   <div className="space-y-4">
                     {[
                       'Full auction bidding service',
@@ -345,7 +345,7 @@ export default function ImportProcess() {
                       'Complete shipping coordination',
                       'Customs clearance & GST',
                       'Australian compliance certification',
-                      'Melbourne delivery & support'
+                      'Australia delivery & support'
                     ].map((item, index) => (
                       <motion.div
                         key={index}
