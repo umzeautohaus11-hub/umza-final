@@ -47,9 +47,9 @@ export default function VehicleDetailClient({ vehicle, relatedVehicles }: Vehicl
     const getListingTypeBadge = () => {
         switch (vehicle.listingType) {
             case 'Order It':
-                return { bg: 'bg-purple-600', text: 'Order It' };
+                return { bg: 'bg-slate-600', text: 'Order It' };
             case 'Secure It':
-                return { bg: 'bg-blue-600', text: 'Secure It' };
+                return { bg: 'bg-amber-600', text: 'Secure It' };
             case 'Buy It':
                 return { bg: 'bg-green-600', text: 'Buy It' };
             default:

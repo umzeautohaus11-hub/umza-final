@@ -38,9 +38,9 @@ export default function VehicleCard({ vehicle }: VehicleCardProps) {
     const getListingTypeBadge = () => {
         switch (vehicle.listingType) {
             case 'Order It':
-                return { bg: 'bg-purple-600', text: 'Order It' };
+                return { bg: 'bg-slate-600', text: 'Order It' };
             case 'Secure It':
-                return { bg: 'bg-blue-600', text: 'Secure It' };
+                return { bg: 'bg-amber-600', text: 'Secure It' };
             case 'Buy It':
                 return { bg: 'bg-green-600', text: 'Buy It' };
             default:
@@ -139,7 +139,7 @@ export default function VehicleCard({ vehicle }: VehicleCardProps) {
                 </p>
 
                 <div className="inline-flex items-center text-[#BDB6AD] hover:text-[#25614F] font-bold text-lg transition-all duration-300 bg-[#25614F]/10 hover:bg-[#25614F]/20 px-4 py-2 rounded-lg group-hover:translate-x-1">
-                    View Details
+                    {vehicle.listingType || 'View Details'}
                     <span className="ml-2 text-xl">→</span>
                 </div>
             </div>
