@@ -77,7 +77,7 @@ export default function VehicleListingClient({ initialVehicles, filterOptions }:
             <section className="relative text-white min-h-[70vh] flex items-center overflow-hidden -mt-20 pt-20">
                 <div className="absolute inset-0">
                     <img
-                        src="/images/hero-bg.jpg"
+                        src="/images/WhatsApp%20Image%202025-12-22%20at%2015.54.59.jpeg"
                         alt="UMZE Autohaus Stock"
                         className="w-full h-full object-cover animate-ken-burns"
                     />
