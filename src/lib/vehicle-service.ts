@@ -146,3 +146,22 @@ export async function getVehicles(options: GetVehiclesOptions): Promise<VehicleR
         totalPages: Math.ceil(total / limit)
     };
 }
+
+export async function getVehicleBySlug(slug: string): Promise<VehicleType | null> {
+    await connectDB();
+    // In our system, the slug is actually the _id
+    const vehicle = await Vehicle.findById(slug).lean();
+    if (!vehicle) return null;
+    return JSON.parse(JSON.stringify(vehicle));
+}
+
+export async function getRelatedVehiclesByVehicle(vehicle: VehicleType, limit: number = 3): Promise<VehicleType[]> {
+    await connectDB();
+    const query = {
+        brand: vehicle.brand,
+        _id: { $ne: vehicle._id },
+        published: true
+    };
+    const vehicles = await Vehicle.find(query).limit(limit).lean();
+    return JSON.parse(JSON.stringify(vehicles));
+}

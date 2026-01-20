@@ -12,59 +12,11 @@ interface PageProps {
     params: Promise<{ slug: string }>;
 }
 
-async function getVehicle(slug: string): Promise<Vehicle | null> {
-    // Use relative URL for API calls - works on both local and Vercel
-    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL ||
-        (typeof window !== 'undefined' ? window.location.origin : 'http://localhost:3000');
-
-    try {
-        const res = await fetch(`${baseUrl}/api/vehicles/${slug}`, {
-            cache: 'no-store',
-            next: { revalidate: 0 }
-        });
-
-        if (!res.ok) {
-            return null;
-        }
-
-        return res.json();
-    } catch (error) {
-        console.error('Error fetching vehicle:', error);
-        return null;
-    }
-}
-
-async function getRelatedVehicles(vehicle: Vehicle): Promise<Vehicle[]> {
-    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL ||
-        (typeof window !== 'undefined' ? window.location.origin : 'http://localhost:3000');
-
-    try {
-        const params = new URLSearchParams({
-            brand: vehicle.brand,
-            limit: '3',
-        });
-
-        const res = await fetch(`${baseUrl}/api/vehicles?${params}`, {
-            cache: 'no-store',
-            next: { revalidate: 0 }
-        });
-
-        if (!res.ok) {
-            return [];
-        }
-
-        const data = await res.json();
-        // Filter out the current vehicle
-        return data.vehicles.filter((v: Vehicle) => v._id !== vehicle._id).slice(0, 3);
-    } catch (error) {
-        console.error('Error fetching related vehicles:', error);
-        return [];
-    }
-}
+import { getVehicleBySlug, getRelatedVehiclesByVehicle } from '@/lib/vehicle-service';
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
     const { slug } = await params;
-    const vehicle = await getVehicle(slug);
+    const vehicle = await getVehicleBySlug(slug);
 
     if (!vehicle) {
         return {
@@ -89,13 +41,13 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
 export default async function VehicleDetailPage({ params }: PageProps) {
     const { slug } = await params;
-    const vehicle = await getVehicle(slug);
+    const vehicle = await getVehicleBySlug(slug);
 
     if (!vehicle) {
         notFound();
     }
 
-    const relatedVehicles = await getRelatedVehicles(vehicle);
+    const relatedVehicles = await getRelatedVehiclesByVehicle(vehicle);
 
     return <VehicleDetailClient vehicle={vehicle} relatedVehicles={relatedVehicles} />;
 }
