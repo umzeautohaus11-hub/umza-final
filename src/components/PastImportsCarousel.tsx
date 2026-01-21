@@ -92,6 +92,18 @@ const pastImports: PastImport[] = [
     {
         image: '/images/past import/Mercedes-Benz-E53-Wagon-Collecting-Cars-25-11-2025-Ari-Gelgec72.avif',
         title: 'Past Import 21'
+    },
+    {
+        image: '/images/CHANGE 2.2.jpeg',
+        title: 'Past Import 22'
+    },
+    {
+        image: '/images/CHANGE 2.jpeg',
+        title: 'Past Import 23'
+    },
+    {
+        image: '/images/CHANGE2.1.avif',
+        title: 'Past Import 24'
     }
 ];
 

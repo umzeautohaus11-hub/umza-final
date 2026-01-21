@@ -142,7 +142,7 @@ export default function Home() {
                   {/* Image Container */}
                   <div className="relative overflow-hidden rounded-3xl border-2 border-[#25614F]/30 group-hover:border-[#25614F]/50 transition-all duration-500">
                     <img
-                      src="/images/most-beautiful-japanese-cars-01.jpg"
+                      src="/images/CHANGE 1.jpeg"
                       alt="Japanese Car Import"
                       className="w-full h-[500px] object-cover transform group-hover:scale-105 transition-transform duration-700"
                     />

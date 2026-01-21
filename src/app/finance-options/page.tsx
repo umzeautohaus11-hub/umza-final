@@ -10,8 +10,8 @@ export default function FinanceOptions() {
             <section className="relative text-white h-screen flex items-center overflow-hidden -mt-20 pt-20">
                 <div className="absolute inset-0">
                     <img
-                        src="/images/WhatsApp Image 2026-01-07 at 17.02.55 (5).jpeg"
-                        alt="Finance Options"
+                        src="/images/CHANGE 5.jpeg"
+                        alt="Finance"
                         className="w-full h-full object-cover animate-ken-burns"
                     />
                     <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/70 to-black/90"></div>
@@ -34,8 +34,8 @@ export default function FinanceOptions() {
                             <span className="text-[#25614F] font-semibold text-sm uppercase tracking-wider">Third-Party Finance</span>
                         </motion.div>
 
-                        <h1 className="text-5xl md:text-7xl font-bold font-heading mb-8 leading-tight text-[#EAE2D6] drop-shadow-2xl">
-                            Finance Options
+                        <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold font-heading mb-8 leading-tight text-[#EAE2D6] drop-shadow-2xl uppercase">
+                            Finance
                         </h1>
                         <div className="w-32 h-1 bg-gradient-to-r from-transparent via-[#25614F] to-transparent mx-auto mb-8"></div>
 
@@ -99,7 +99,7 @@ export default function FinanceOptions() {
                             viewport={{ once: true }}
                             transition={{ duration: 0.8 }}
                         >
-                            <h2 className="text-4xl md:text-5xl font-bold text-[#EAE2D6]">
+                            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold font-heading text-[#EAE2D6] uppercase tracking-wider">
                                 Flexible Finance Solutions
                             </h2>
                             <div className="w-24 h-1 bg-[#25614F]"></div>
@@ -305,7 +305,7 @@ export default function FinanceOptions() {
                             viewport={{ once: true }}
                             transition={{ duration: 0.8 }}
                         >
-                            <h2 className="text-4xl md:text-5xl font-bold text-[#EAE2D6] mb-8">Why Use Our Finance Partners</h2>
+                            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold font-heading text-[#EAE2D6] uppercase tracking-wider mb-8">Why Use Our Finance Partners</h2>
                             <div className="w-24 h-1 bg-[#25614F] mb-8"></div>
 
                             <div className="space-y-4">
@@ -345,7 +345,7 @@ export default function FinanceOptions() {
                         >
                             <div className="relative rounded-3xl overflow-hidden h-[600px]">
                                 <img
-                                    src="/images/WhatsApp Image 2025-12-22 at 15.54.59.jpeg"
+                                    src="/images/PIC 5.1.jpg"
                                     alt="Finance Benefits"
                                     className="w-full h-full object-cover"
                                 />

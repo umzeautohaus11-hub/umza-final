@@ -48,7 +48,7 @@ export default function AboutUs() {
               <span className="text-[#25614F] font-semibold text-sm uppercase tracking-wider">Our Story</span>
             </motion.div>
 
-            <h1 className="text-5xl md:text-7xl font-bold font-heading mb-8 leading-tight text-[#EAE2D6] drop-shadow-2xl">
+            <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold font-heading mb-8 leading-tight text-[#EAE2D6] drop-shadow-2xl">
               WE HELP PEOPLE IN AUSTRALIA IMPORT QUALITY CARS FROM JAPAN
             </h1>
             <div className="flex justify-center gap-4 mb-8">
@@ -59,7 +59,7 @@ export default function AboutUs() {
           </motion.div>
 
           <motion.p
-            className="text-xl md:text-3xl mb-12 max-w-3xl mx-auto text-[#EAE2D6] leading-relaxed drop-shadow-lg font-light"
+            className="text-lg md:text-2xl mb-12 max-w-3xl mx-auto text-[#EAE2D6] font-semibold drop-shadow-lg"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.6 }}
@@ -114,7 +114,7 @@ export default function AboutUs() {
               <span className="text-[#25614F] font-semibold text-sm uppercase tracking-wider">Our Journey</span>
             </motion.div>
 
-            <h2 className="text-5xl md:text-7xl font-bold font-heading mb-6 text-[#EAE2D6]">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold font-heading mb-6 text-[#EAE2D6] uppercase tracking-wider">
               Our Story
             </h2>
             <div className="w-32 h-1 bg-gradient-to-r from-transparent via-[#25614F] to-transparent mx-auto"></div>
@@ -131,12 +131,12 @@ export default function AboutUs() {
               transition={{ duration: 0.8 }}
             >
               <div className="space-y-6">
-                <p className="text-xl md:text-2xl text-[#EAE2D6] leading-relaxed">
+                <p className="text-lg md:text-xl text-[#EAE2D6] leading-relaxed">
                   Umze Autohaus began long before it became a business. In <span className="text-[#25614F] font-bold">2012</span>, my dad started importing cars from Japan out of pure passion.
                 </p>
 
                 <p className="text-lg text-[#BDB6AD] leading-relaxed">
-                  I grew up around that process, and in 2019, I imported my first car—a Toyota Chaser. It was a clean example that saved me thousands compared to the local market. That experience showed me the real value of buying directly from Japan.
+                  I grew up around that process, and in 2019, I imported my first car, a Toyota Chaser. It was a clean example that saved me thousands compared to the local market. That experience showed me the real value of buying directly from Japan.
                 </p>
 
                 <p className="text-lg text-[#BDB6AD] leading-relaxed">
@@ -146,7 +146,7 @@ export default function AboutUs() {
 
               {/* Highlighted Quote */}
               <div className="relative pl-6 border-l-4 border-[#25614F]">
-                <p className="text-2xl text-[#25614F] font-semibold italic leading-relaxed">
+                <p className="text-xl md:text-2xl text-[#25614F] font-semibold italic leading-relaxed">
                   "What started as a personal win slowly turned into helping others make better, safer, and more affordable choices."
                 </p>
               </div>
@@ -162,7 +162,7 @@ export default function AboutUs() {
             >
               <div className="relative rounded-3xl overflow-hidden h-[500px]">
                 <img
-                  src="/images/past import/WhatsApp Image 2025-11-16 at 16.32.46_f91e50e0.jpg"
+                  src="/images/CHANGE 3.jpeg"
                   alt="First Toyota Chaser Import"
                   className="w-full h-full object-cover"
                 />
@@ -196,15 +196,15 @@ export default function AboutUs() {
             transition={{ duration: 0.8 }}
           >
             <div className="space-y-6 text-center">
-              <p className="text-xl text-[#BDB6AD] leading-relaxed">
+              <p className="text-lg text-[#BDB6AD] leading-relaxed">
                 From there, things grew naturally. I began helping mates, family, and eventually their mates as well. Translating auction sheets, researching exporters, checking condition reports, and guiding people through the entire process became something I genuinely enjoyed.
               </p>
 
-              <p className="text-xl text-[#BDB6AD] leading-relaxed">
+              <p className="text-lg text-[#BDB6AD] leading-relaxed">
                 Over the years, I learned that an auction grade only tells part of the story. The real condition comes from checking photos, physical inspections, underbody condition, repairs, rust points, engine bay signs, and overall presentation.
               </p>
 
-              <p className="text-2xl text-[#EAE2D6] leading-relaxed font-light mt-8">
+              <p className="text-xl md:text-2xl text-[#EAE2D6] leading-relaxed font-light mt-8">
                 We've worked with more than <span className="text-[#25614F] font-bold">100 cars</span>—everything from classic JDM models and daily runabouts to modern Europeans, performance cars, hybrids, and collector vehicles.
               </p>
             </div>
@@ -212,7 +212,7 @@ export default function AboutUs() {
 
           {/* Vertical Timeline Journey */}
           <div className="mb-32">
-            <h3 className="text-4xl font-bold text-center text-[#EAE2D6] mb-16">The Journey</h3>
+            <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold font-heading text-center mb-16 text-[#EAE2D6] uppercase tracking-wider">The Journey</h3>
 
             <div className="max-w-4xl mx-auto relative">
               {/* Vertical Line */}
@@ -318,7 +318,7 @@ export default function AboutUs() {
               <div className="relative rounded-3xl overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0F1614] via-transparent to-transparent z-10"></div>
                 <img
-                  src="/images/WhatsApp Image 2025-11-16 at 16.32.46_f91e50e0.jpg"
+                  src="/images/CHANGE 3.1.jpg"
                   alt="Japanese Import Car"
                   className="w-full h-[500px] object-cover"
                 />
@@ -368,7 +368,7 @@ export default function AboutUs() {
                 <span className="text-[#25614F] font-semibold text-sm uppercase tracking-wider">Location Matters</span>
               </motion.div>
 
-              <h2 className="text-5xl md:text-6xl font-bold font-heading mb-8 text-[#EAE2D6] leading-tight">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold font-heading mb-8 text-[#EAE2D6] uppercase tracking-wider">
                 Why Japan?
               </h2>
 
@@ -379,7 +379,7 @@ export default function AboutUs() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: 0.2 }}
                 >
-                  <p className="text-2xl md:text-3xl text-[#EAE2D6] font-light leading-relaxed mb-6">
+                  <p className="text-xl md:text-2xl text-[#EAE2D6] font-light leading-relaxed mb-6">
                     Japanese vehicles stand apart because of how they're <span className="text-[#25614F] font-semibold">maintained</span>, not just how they're built.
                   </p>
                 </motion.div>
@@ -429,7 +429,7 @@ export default function AboutUs() {
               <span className="text-[#25614F] font-semibold text-sm uppercase tracking-wider">Our Difference</span>
             </motion.div>
 
-            <h2 className="text-5xl md:text-6xl font-bold font-heading mb-6 text-[#EAE2D6]">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold font-heading mb-6 text-[#EAE2D6] uppercase tracking-wider">
               What Makes UMZE Autohaus Different
             </h2>
             <div className="w-32 h-1 bg-gradient-to-r from-transparent via-[#25614F] to-transparent mx-auto mb-8"></div>
@@ -546,7 +546,7 @@ export default function AboutUs() {
               <span className="text-[#25614F] font-semibold text-sm uppercase tracking-wider">Proven Track Record</span>
             </motion.div>
 
-            <h2 className="text-5xl md:text-6xl font-bold font-heading mb-6 text-[#EAE2D6]">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold font-heading mb-6 text-[#EAE2D6] uppercase tracking-wider">
               Experience & Vehicle Range
             </h2>
             <div className="flex justify-center gap-3 mb-8">
@@ -749,7 +749,7 @@ export default function AboutUs() {
 
             <div className="relative">
               <div className="absolute -inset-4 bg-gradient-to-r from-[#25614F]/20 via-[#25614F]/30 to-[#25614F]/20 blur-xl rounded-3xl"></div>
-              <p className="relative text-3xl md:text-4xl text-[#EAE2D6] leading-relaxed font-light py-12 px-8">
+              <p className="relative text-2xl md:text-3xl text-[#EAE2D6] leading-relaxed font-light py-12 px-8">
                 Helping people import quality cars from Japan <span className="text-[#25614F] font-semibold">safely</span>, <span className="text-[#25614F] font-semibold">transparently</span>, and <span className="text-[#25614F] font-semibold">confidently</span>.
               </p>
             </div>
