@@ -16,7 +16,7 @@ async function checkAuth(request: NextRequest) {
 // PUT /api/form-submissions/[id] - Update status
 export async function PUT(
     request: NextRequest,
-    { params }: { params: { id: string } }
+    { params }: { params: Promise<{ id: string }> }
 ) {
     try {
         const decoded = await checkAuth(request);
@@ -51,7 +51,7 @@ export async function PUT(
 // DELETE /api/form-submissions/[id] - Delete submission
 export async function DELETE(
     request: NextRequest,
-    { params }: { params: { id: string } }
+    { params }: { params: Promise<{ id: string }> }
 ) {
     try {
         const decoded = await checkAuth(request);
