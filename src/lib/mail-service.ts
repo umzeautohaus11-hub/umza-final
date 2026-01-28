@@ -1,25 +1,25 @@
 import nodemailer from 'nodemailer';
 
 const transporter = nodemailer.createTransport({
-    host: process.env.SMTP_HOST,
-    port: parseInt(process.env.SMTP_PORT || '587'),
-    secure: process.env.SMTP_SECURE === 'true', // true for 465, false for other ports
-    auth: {
-        user: process.env.SMTP_USER,
-        pass: process.env.SMTP_PASS,
-    },
+  host: process.env.SMTP_HOST,
+  port: parseInt(process.env.SMTP_PORT || '587'),
+  secure: process.env.SMTP_SECURE === 'true', // true for 465, false for other ports
+  auth: {
+    user: process.env.SMTP_USER,
+    pass: process.env.SMTP_PASS,
+  },
 });
 
 export async function sendEnquiryEmail(submission: any) {
-    const { name, email, phone, vehicle, budget, message } = submission;
+  const { name, email, phone, vehicle, budget, message } = submission;
 
-    const recipientEmail = "umzeautohaus11@gmail.com";
+  const recipients = ["umzeautohaus11@gmail.com", "Info@umzeautohaus.com.au"];
 
-    const mailOptions = {
-        from: `"UMZE Autohaus Website" <${process.env.SMTP_USER}>`,
-        to: recipientEmail,
-        subject: `New Website Enquiry from ${name}`,
-        html: `
+  const mailOptions = {
+    from: `"UMZE Autohaus Website" <${process.env.SMTP_USER}>`,
+    to: recipients.join(', '),
+    subject: `New Website Enquiry from ${name}`,
+    html: `
       <div style="font-family: Arial, sans-serif; line-height: 1.6; color: #333; max-width: 600px; border: 1px solid #ddd; padding: 20px; border-radius: 10px;">
         <h2 style="color: #25614F; border-bottom: 2px solid #25614F; padding-bottom: 10px;">New Website Enquiry</h2>
         <p>You have received a new enquiry from the website contact forms.</p>
@@ -61,14 +61,15 @@ export async function sendEnquiryEmail(submission: any) {
         </p>
       </div>
     `,
-    };
+  };
 
-    try {
-        await transporter.sendMail(mailOptions);
-        console.log('Enquiry email sent successfully to', recipientEmail);
-        return { success: true };
-    } catch (error) {
-        console.error('Error sending enquiry email:', error);
-        return { success: false, error };
-    }
+  try {
+    await transporter.sendMail(mailOptions);
+    console.log('Enquiry email sent successfully to', recipients.join(', '));
+    return { success: true };
+  } catch (error) {
+
+    console.error('Error sending enquiry email:', error);
+    return { success: false, error };
+  }
 }
