@@ -4,10 +4,13 @@ import { usePathname, useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import AdminSidebar from '@/components/admin/AdminSidebar';
 
+import { Menu } from 'lucide-react';
+
 export default function AdminLayout({ children }: { children: React.ReactNode }) {
     const pathname = usePathname();
     const router = useRouter();
     const [isAuthorized, setIsAuthorized] = useState(false);
+    const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
     // Check if we are on the login page
     const isLoginPage = pathname?.startsWith('/admin/login');
@@ -42,9 +45,21 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
 
     // Admin dashboard layout with sidebar
     return (
-        <div className="min-h-screen bg-[#0F1614] flex">
-            <AdminSidebar />
-            <main className="flex-1 ml-64 p-8 overflow-y-auto h-screen bg-[#0F1614] text-[#EAE2D6]">
+        <div className="min-h-screen bg-[#0F1614] flex flex-col md:flex-row">
+            {/* Mobile Header */}
+            <header className="md:hidden bg-[#0F1614] border-b border-[#25614F]/20 p-4 flex items-center justify-between sticky top-0 z-40">
+                <img src="/images/PNG.png" alt="UMZE" className="h-8 w-auto" />
+                <button
+                    onClick={() => setIsSidebarOpen(true)}
+                    className="text-[#EAE2D6] p-2 hover:bg-[#25614F]/10 rounded-lg transition-colors"
+                >
+                    <Menu size={24} />
+                </button>
+            </header>
+
+            <AdminSidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
+
+            <main className="flex-1 md:ml-64 p-4 md:p-8 overflow-y-auto h-screen bg-[#0F1614] text-[#EAE2D6]">
                 <div className="max-w-7xl mx-auto">
                     {children}
                 </div>
@@ -52,3 +67,4 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
         </div>
     );
 }
+

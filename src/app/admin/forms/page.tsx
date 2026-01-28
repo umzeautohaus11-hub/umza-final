@@ -60,60 +60,65 @@ export default function AdminForms() {
   return (
     <div className="min-h-screen bg-carbon p-6">
       <div className="max-w-7xl mx-auto">
-        <h1 className="text-4xl font-bold mb-8 text-[#66E5C4] font-heading">Form Submissions</h1>
+        <h1 className="text-2xl md:text-4xl font-bold mb-6 md:mb-8 text-[#66E5C4] font-heading">Form Submissions</h1>
         <div className="bg-[#1C1C1C] border border-[#004B3A] rounded-lg shadow-lg overflow-hidden">
-          <table className="w-full">
-            <thead className="bg-[#004B3A]">
-              <tr>
-                <th className="p-4 text-left text-[#F7F7F7] font-semibold">Name</th>
-                <th className="p-4 text-left text-[#F7F7F7] font-semibold">Email</th>
-                <th className="p-4 text-left text-[#F7F7F7] font-semibold">Status</th>
-                <th className="p-4 text-left text-[#F7F7F7] font-semibold">Date</th>
-                <th className="p-4 text-[#F7F7F7] font-semibold">Actions</th>
-              </tr>
-            </thead>
-            <tbody>
-              {submissions.map((sub) => (
-                <tr key={sub._id} className="border-t border-[#A9AAAE] hover:bg-[#0A0A0A] transition duration-200">
-                  <td className="p-4 text-[#F7F7F7]">{sub.name}</td>
-                  <td className="p-4 text-[#A9AAAE]">{sub.email}</td>
-                  <td className="p-4">
-                    <span className={`px-2 py-1 rounded text-sm font-medium ${sub.status === 'unread' ? 'bg-red-600 text-white' :
-                      sub.status === 'read' ? 'bg-yellow-600 text-white' :
-                        'bg-green-600 text-white'
-                      }`}>
-                      {sub.status}
-                    </span>
-                  </td>
-                  <td className="p-4 text-[#A9AAAE]">{new Date(sub.submittedAt).toLocaleDateString()}</td>
-                  <td className="p-4 space-x-2">
-                    <button
-                      onClick={() => setViewing(sub)}
-                      className="bg-[#66E5C4] hover:bg-[#004B3A] text-[#0A0A0A] px-3 py-2 rounded font-medium transition duration-300"
-                    >
-                      View
-                    </button>
-                    <select
-                      value={sub.status}
-                      onChange={(e) => handleStatusChange(sub._id, e.target.value)}
-                      className="bg-[#0A0A0A] border border-[#A9AAAE] text-[#F7F7F7] px-2 py-2 rounded"
-                    >
-                      <option value="unread">Unread</option>
-                      <option value="read">Read</option>
-                      <option value="responded">Responded</option>
-                    </select>
-                    <button
-                      onClick={() => handleDelete(sub._id)}
-                      className="bg-red-600 hover:bg-red-700 text-white px-3 py-2 rounded font-medium transition duration-300"
-                    >
-                      Delete
-                    </button>
-                  </td>
+          <div className="overflow-x-auto text-sm md:text-base">
+            <table className="w-full min-w-[800px] md:min-w-0">
+              <thead className="bg-[#004B3A]">
+                <tr>
+                  <th className="p-3 md:p-4 text-left text-[#F7F7F7] font-semibold">Name</th>
+                  <th className="p-3 md:p-4 text-left text-[#F7F7F7] font-semibold">Email</th>
+                  <th className="p-4 text-left text-[#F7F7F7] font-semibold hidden lg:table-cell">Status</th>
+                  <th className="p-3 md:p-4 text-left text-[#F7F7F7] font-semibold">Date</th>
+                  <th className="p-3 md:p-4 text-center text-[#F7F7F7] font-semibold">Actions</th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
+              </thead>
+              <tbody>
+                {submissions.map((sub) => (
+                  <tr key={sub._id} className="border-t border-[#A9AAAE] hover:bg-[#0A0A0A] transition duration-200">
+                    <td className="p-3 md:p-4 text-[#F7F7F7] whitespace-nowrap">{sub.name}</td>
+                    <td className="p-3 md:p-4 text-[#A9AAAE] whitespace-nowrap">{sub.email}</td>
+                    <td className="p-4 hidden lg:table-cell">
+                      <span className={`px-2 py-1 rounded text-xs font-medium ${sub.status === 'unread' ? 'bg-red-600 text-white' :
+                        sub.status === 'read' ? 'bg-yellow-600 text-white' :
+                          'bg-green-600 text-white'
+                        }`}>
+                        {sub.status}
+                      </span>
+                    </td>
+                    <td className="p-3 md:p-4 text-[#A9AAAE] whitespace-nowrap">{new Date(sub.submittedAt).toLocaleDateString()}</td>
+                    <td className="p-3 md:p-4 text-center">
+                      <div className="flex flex-col sm:flex-row gap-2 justify-center items-center">
+                        <button
+                          onClick={() => setViewing(sub)}
+                          className="w-full sm:w-auto bg-[#66E5C4] hover:bg-[#004B3A] text-[#0A0A0A] px-3 py-1.5 rounded text-xs md:text-sm font-medium transition duration-300"
+                        >
+                          View
+                        </button>
+                        <select
+                          value={sub.status}
+                          onChange={(e) => handleStatusChange(sub._id, e.target.value)}
+                          className="w-full sm:w-auto bg-[#0A0A0A] border border-[#A9AAAE] text-[#F7F7F7] px-2 py-1.5 rounded text-xs"
+                        >
+                          <option value="unread">Unread</option>
+                          <option value="read">Read</option>
+                          <option value="responded">Responded</option>
+                        </select>
+                        <button
+                          onClick={() => handleDelete(sub._id)}
+                          className="w-full sm:w-auto bg-red-600 hover:bg-red-700 text-white px-3 py-1.5 rounded text-xs md:text-sm font-medium transition duration-300"
+                        >
+                          Delete
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </div>
+
         {viewing && (
           <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center p-4">
             <div className="bg-[#1C1C1C] border border-[#004B3A] p-8 rounded-lg w-full max-w-lg max-h-[90vh] overflow-y-auto">
