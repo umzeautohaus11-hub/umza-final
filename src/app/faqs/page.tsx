@@ -7,7 +7,10 @@ export const metadata: Metadata = {
     openGraph: {
         title: 'Japan Car Import FAQs Australia',
         description: 'Find answers to common questions about importing cars from Japan to Australia, including compliance rules, costs, and eligibility.',
-    }
+    },
+    alternates: {
+        canonical: '/faqs',
+    },
 };
 
 export default function FAQsPage() {

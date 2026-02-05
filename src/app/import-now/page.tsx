@@ -7,7 +7,10 @@ export const metadata: Metadata = {
     openGraph: {
         title: 'Buy JDM Cars in Australia | Import Now',
         description: 'Buy JDM cars in Australia with UMZE Autohaus. Start your Japanese car import today with expert guidance and complete import support.',
-    }
+    },
+    alternates: {
+        canonical: '/import-now',
+    },
 };
 
 export default function ImportNowPage() {

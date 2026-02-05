@@ -12,6 +12,9 @@ export const metadata: Metadata = {
     description: 'Explore premium JDM cars for sale in Australia. UMZE Autohaus helps you buy authentic Japanese cars directly from Japan auctions.',
     type: 'website',
   },
+  alternates: {
+    canonical: '/vehicles-for-import',
+  },
 };
 
 interface PageProps {

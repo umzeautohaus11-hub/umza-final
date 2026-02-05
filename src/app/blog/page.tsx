@@ -7,7 +7,10 @@ export const metadata: Metadata = {
     openGraph: {
         title: 'Japanese Performance Cars Australia Blog',
         description: 'Discover guides on Japanese performance cars in Australia, import tips, auction insights, and the best Japanese import cars.',
-    }
+    },
+    alternates: {
+        canonical: '/blog',
+    },
 };
 
 export default function BlogPage() {

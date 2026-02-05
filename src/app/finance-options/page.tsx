@@ -7,7 +7,10 @@ export const metadata: Metadata = {
     openGraph: {
         title: 'Japanese Car Dealer Australia | Finance Options',
         description: 'UMZE Autohaus is a trusted Japanese car dealer in Australia offering flexible finance options for importing JDM and used Japanese cars.',
-    }
+    },
+    alternates: {
+        canonical: '/finance-options',
+    },
 };
 
 export default function FinanceOptionsPage() {

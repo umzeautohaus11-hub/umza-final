@@ -7,7 +7,10 @@ export const metadata: Metadata = {
     openGraph: {
         title: 'Cost to Import Car from Japan to Australia',
         description: 'Calculate the cost to import a car from Japan to Australia. Get accurate estimates for auction price, shipping, taxes, and compliance.',
-    }
+    },
+    alternates: {
+        canonical: '/calculator',
+    },
 };
 
 export default function CalculatorPage() {
