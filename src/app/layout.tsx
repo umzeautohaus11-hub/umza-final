@@ -22,10 +22,10 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL || 'https://www.umzeautohaus.com.au'),
   title: {
-    default: "UMZE Autohaus - Premium Japanese Car Imports Melbourne | JDM Specialists",
+    default: "Japanese Car Imports Australia | UMZE Autohaus",
     template: "%s | UMZE Autohaus"
   },
-  description: "Melbourne's trusted JDM import specialists. Import premium Japanese vehicles from Japan with full compliance, transparent pricing & expert support. 100+ successful imports.",
+  description: "UMZE Autohaus is a trusted Japanese car importer in Australia, helping you buy, source, and import high-quality Japanese cars with ease.",
   keywords: ["Japanese car imports Melbourne", "JDM imports Australia", "import cars from Japan", "Japanese vehicle specialists", "car import service Melbourne", "JDM cars Australia", "Japanese auction cars", "import compliance Melbourne"],
   authors: [{ name: "UMZE Autohaus" }],
   creator: "UMZE Autohaus",
@@ -40,8 +40,8 @@ export const metadata: Metadata = {
     locale: 'en_AU',
     url: process.env.NEXT_PUBLIC_BASE_URL || 'https://www.umzeautohaus.com.au',
     siteName: 'UMZE Autohaus',
-    title: 'UMZE Autohaus - Premium Japanese Car Imports Melbourne',
-    description: 'Melbourne\'s trusted JDM import specialists. Import premium Japanese vehicles with full compliance & transparent pricing.',
+    title: 'Japanese Car Imports Australia | UMZE Autohaus',
+    description: 'UMZE Autohaus is a trusted Japanese car importer in Australia, helping you buy, source, and import high-quality Japanese cars with ease.',
     images: [
       {
         url: '/images/PNG.png',
@@ -53,8 +53,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'UMZE Autohaus - Premium Japanese Car Imports Melbourne',
-    description: 'Melbourne\'s trusted JDM import specialists',
+    title: 'Japanese Car Imports Australia | UMZE Autohaus',
+    description: 'UMZE Autohaus is a trusted Japanese car importer in Australia, helping you buy, source, and import high-quality Japanese cars with ease.',
     images: ['/images/PNG.png'],
   },
   robots: {
@@ -71,9 +71,6 @@ export const metadata: Metadata = {
   verification: {
     google: 'K-XntYXhbRTkuDKxxTK22Hq90v4ZBr4h4fFT-H9lEaA',
   },
-  alternates: {
-    canonical: process.env.NEXT_PUBLIC_BASE_URL || 'https://www.umzeautohaus.com.au',
-  },
 };
 
 export default function RootLayout({
@@ -84,7 +81,6 @@ export default function RootLayout({
   return (
     <html lang="en-AU">
       <head>
-        <link rel="canonical" href={process.env.NEXT_PUBLIC_BASE_URL || 'https://www.umzeautohaus.com.au'} />
         <meta name="geo.region" content="AU-VIC" />
         <meta name="geo.placename" content="Melbourne" />
         <meta name="geo.position" content="-37.8136;144.9631" />

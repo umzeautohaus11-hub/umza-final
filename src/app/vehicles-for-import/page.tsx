@@ -5,11 +5,11 @@ import { getVehicles } from '@/lib/vehicle-service';
 import { getFilterOptions } from '@/lib/vehicle-data';
 
 export const metadata: Metadata = {
-  title: 'Stock | UMZE Autohaus',
-  description: 'Browse in-stock vehicles, secure incoming arrivals, or order a custom import. Premium Japanese and European vehicles curated for Australian buyers.',
+  title: 'JDM Cars for Sale in Australia | UMZE Autohaus',
+  description: 'Explore premium JDM cars for sale in Australia. UMZE Autohaus helps you buy authentic Japanese cars directly from Japan auctions.',
   openGraph: {
-    title: 'Stock | UMZE Autohaus',
-    description: 'Browse BUY IT, SECURE IT, and ORDER IT vehicles from UMZE Autohaus.',
+    title: 'JDM Cars for Sale in Australia | UMZE Autohaus',
+    description: 'Explore premium JDM cars for sale in Australia. UMZE Autohaus helps you buy authentic Japanese cars directly from Japan auctions.',
     type: 'website',
   },
 };
