@@ -24,6 +24,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
     // Blog posts
     const blogPosts = [
+        '/blog/japanese-car-imports-australia-complete-guide',
+        '/blog/auction-vs-dealer-stock-why-direct-importing-saves-you-thousands',
+        '/blog/the-compliance-headache-how-new-sevs-rules-affect-your-next-import',
         '/blog/japanese-auction-grading-system',
         '/blog/how-to-read-auction-sheet',
         '/blog/benefits-of-importing-from-japan',

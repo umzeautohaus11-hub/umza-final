@@ -85,6 +85,84 @@ export default function RootLayout({
         <meta name="geo.placename" content="Melbourne" />
         <meta name="geo.position" content="-37.8136;144.9631" />
         <meta name="ICBM" content="-37.8136, 144.9631" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "UMZE Autohaus",
+              "url": "https://www.umzeautohaus.com.au",
+              "logo": "https://www.umzeautohaus.com.au/images/PNG.png",
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+61 405 599 076",
+                "contactType": "customer service",
+                "areaServed": "AU",
+                "availableLanguage": "en"
+              },
+              "sameAs": [
+                "https://www.facebook.com/umzeautohaus",
+                "https://www.instagram.com/umzeautohaus"
+              ]
+            })
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "LocalBusiness",
+              "name": "UMZE Autohaus",
+              "image": "https://www.umzeautohaus.com.au/images/PNG.png",
+              "@id": "https://www.umzeautohaus.com.au",
+              "url": "https://www.umzeautohaus.com.au",
+              "telephone": "+61 405 599 076",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Melbourne",
+                "addressLocality": "Melbourne",
+                "addressRegion": "VIC",
+                "postalCode": "3000",
+                "addressCountry": "AU"
+              },
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": -37.8136,
+                "longitude": 144.9631
+              },
+              "openingHoursSpecification": {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": [
+                  "Monday",
+                  "Tuesday",
+                  "Wednesday",
+                  "Thursday",
+                  "Friday"
+                ],
+                "opens": "09:00",
+                "closes": "17:30"
+              }
+            })
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              "name": "UMZE Autohaus",
+              "url": "https://www.umzeautohaus.com.au",
+              "potentialAction": {
+                "@type": "SearchAction",
+                "target": "https://www.umzeautohaus.com.au/vehicles-for-import?q={search_term_string}",
+                "query-input": "required name=search_term_string"
+              }
+            })
+          }}
+        />
       </head>
       <body
         className={`${montserrat.variable} ${poppins.variable} antialiased`}
