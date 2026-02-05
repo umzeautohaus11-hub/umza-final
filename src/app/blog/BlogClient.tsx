@@ -20,6 +20,15 @@ export default function Blog() {
 
   const blogs = [
     {
+      id: 'japanese-car-imports-australia-complete-guide',
+      title: 'Japanese Car Imports Australia: The Complete Guide',
+      excerpt: 'Discover why Japanese car imports are so popular in Australia and learn the complete process of buying JDM cars with confidence.',
+      date: 'February 5, 2026',
+      readTime: '15 min read',
+      category: 'Buyer Education',
+      image: '/images/blog/wp12190157.webp'
+    },
+    {
       id: 'auction-vs-dealer-stock-why-direct-importing-saves-you-thousands',
       title: 'Auction vs. Dealer Stock: Why Direct Importing Saves You Thousands',
       excerpt: 'Discover why direct importing from Japanese auctions is often the smartest and most cost-effective way to secure your dream JDM vehicle.',
