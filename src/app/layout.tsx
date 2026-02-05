@@ -69,7 +69,7 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    google: 'your-google-verification-code', // Add your Google Search Console verification code
+    google: 'K-XntYXhbRTkuDKxxTK22Hq90v4ZBr4h4fFT-H9lEaA',
   },
   alternates: {
     canonical: process.env.NEXT_PUBLIC_BASE_URL || 'https://www.umzeautohaus.com.au',
