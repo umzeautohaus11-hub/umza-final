@@ -45,7 +45,7 @@ export default function HomeClient() {
               transition={{ duration: 1, delay: 0.3 }}
             >
               <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold font-heading mb-6 leading-tight text-[#EAE2D6] drop-shadow-2xl">
-                UMZE AUTOHAUS
+                Umze Autohaus - Japanese Car Imports in Australia
               </h1>
               <p className="text-base md:text-xl lg:text-2xl mb-6 text-[#EAE2D6] font-semibold drop-shadow-lg">
                 We help people in Australia import quality cars from Japan

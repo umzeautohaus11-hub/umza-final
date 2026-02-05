@@ -34,8 +34,8 @@ export default function FinanceOptions() {
                             <span className="text-[#25614F] font-semibold text-sm uppercase tracking-wider">Third-Party Finance</span>
                         </motion.div>
 
-                        <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold font-heading mb-8 leading-tight text-[#EAE2D6] drop-shadow-2xl uppercase">
-                            Finance
+                        <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold font-heading mb-8 leading-tight text-[#EAE2D6] drop-shadow-2xl">
+                            Japanese Car Import Finance Options in Australia
                         </h1>
                         <div className="w-32 h-1 bg-gradient-to-r from-transparent via-[#25614F] to-transparent mx-auto mb-8"></div>
 

@@ -45,7 +45,7 @@ export default function EligibilityClient() {
                         className="prose prose-invert prose-lg max-w-none"
                     >
                         <p className="text-xl leading-relaxed mb-8">
-                            One of the most common questions people ask when considering importing a vehicle is simple: "Am I actually allowed to import this car into Australia?"
+                            One of the most common questions people ask when considering importing a vehicle is simple: "Am I actually allowed to import this car into Australia?" Whether you are looking for <Link href="/" className="text-[#25614F] hover:underline">Japanese car imports Australia</Link> buyers love or browsing the latest <Link href="/vehicles-for-import" className="text-[#25614F] hover:underline">JDM cars for sale in Australia</Link>, understanding eligibility is the first step.
                         </p>
 
                         <h2 className="text-3xl font-bold font-heading mb-6 text-[#EAE2D6]">

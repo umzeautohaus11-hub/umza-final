@@ -89,7 +89,7 @@ export default function BlogContent() {
                         </p>
 
                         <p className="leading-relaxed mb-8">
-                            If you’re searching for Japanese car imports Australia buyers trust or exploring JDM cars for sale in Australia, this in-depth guide will help you understand the market, benefits, legal process, and how to choose the right importer—so you can buy with complete confidence.
+                            If you’re searching for <Link href="/" className="text-[#25614F] hover:underline">Japanese car imports Australia</Link> buyers trust or exploring <Link href="/vehicles-for-import" className="text-[#25614F] hover:underline">JDM cars for sale in Australia</Link>, this in-depth guide will help you understand the market, benefits, legal process, and how to choose the right importer—so you can buy with complete confidence.
                         </p>
 
                         <h2 className="text-3xl font-bold font-heading text-[#EAE2D6] mt-12 mb-6">Why Japanese Car Imports Are So Popular in Australia</h2>

@@ -88,7 +88,7 @@ export default function JapaneseAuctionGradingClient() {
                             Japanese auctions can feel confusing to first-time importers. Auction sheets look complex with codes, grades, and diagrams that seem like a foreign language. However, understanding these documents is crucial before you bid on any vehicle.
                         </p>
                         <p className="leading-relaxed mb-8">
-                            At UMZE Autohaus, we've helped hundreds of buyers navigate Japanese auctions. We've seen costly mistakes made when people bid without properly reading auction sheets. This guide will help you understand what you're looking at and avoid those expensive errors.
+                            At UMZE Autohaus, we've helped hundreds of buyers navigate Japanese auctions. We've seen costly mistakes made when people bid without properly reading auction sheets. Whether you are starting your journey into <Link href="/" className="text-[#25614F] hover:underline">Japanese car imports Australia</Link> or hunting for top-quality <Link href="/vehicles-for-import" className="text-[#25614F] hover:underline">JDM cars for sale in Australia</Link>, this guide will help you understand what you're looking at and avoid those expensive errors.
                         </p>
 
                         <h2 className="text-3xl font-bold font-heading text-[#EAE2D6] mt-12 mb-6">Understanding Overall Grades</h2>

@@ -111,7 +111,7 @@ export default function ImportProcess() {
             </motion.div>
 
             <h1 className="text-4xl md:text-7xl font-bold font-heading mb-8 leading-tight text-[#EAE2D6] drop-shadow-2xl">
-              A Seamless, Transparent Import Process
+              import Process - How to Import Cars from Japan to Australia
             </h1>
             <div className="flex justify-center gap-4 mb-8">
               <div className="w-20 h-1 bg-[#25614F] rounded-full"></div>

@@ -45,7 +45,7 @@ export default function CommonMistakesClient() {
                         className="prose prose-invert prose-lg max-w-none"
                     >
                         <p className="text-xl leading-relaxed mb-8">
-                            Importing a car from Japan can be a rewarding experience, but it's also an area where small misunderstandings can lead to frustration, delays, or unexpected costs.
+                            Importing a car from Japan can be a rewarding experience, but it's also an area where small misunderstandings can lead to frustration, delays, or unexpected costs. Whether you are navigating <Link href="/" className="text-[#25614F] hover:underline">Japanese car imports Australia</Link> regulations or exploring various <Link href="/vehicles-for-import" className="text-[#25614F] hover:underline">JDM cars for sale in Australia</Link>, being aware of common pitfalls is essential.
                         </p>
 
                         <h2 className="text-3xl font-bold font-heading mb-6 text-[#EAE2D6]">

@@ -45,7 +45,7 @@ export default function BenefitsClient() {
                         className="prose prose-invert prose-lg max-w-none"
                     >
                         <p className="text-xl leading-relaxed mb-8">
-                            Importing vehicles from Japan offers numerous advantages for Australian buyers. From better condition to unique models, Japanese imports provide excellent value and quality.
+                            Importing vehicles from Japan offers numerous advantages for Australian buyers. From better condition to unique models, Japanese imports provide excellent value and quality. Whether you are searching for <Link href="/" className="text-[#25614F] hover:underline">Japanese car imports Australia</Link> buyers trust or browsing <Link href="/vehicles-for-import" className="text-[#25614F] hover:underline">JDM cars for sale in Australia</Link>, the benefits are undeniable.
                         </p>
 
                         <h2 className="text-3xl font-bold font-heading mb-6 text-[#EAE2D6]">

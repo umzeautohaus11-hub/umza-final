@@ -113,7 +113,7 @@ export default function Blog() {
             transition={{ duration: 1, delay: 0.3 }}
           >
             <h1 className="text-4xl md:text-6xl font-bold font-heading mb-6 leading-tight text-[#EAE2D6] drop-shadow-2xl">
-              UMZE Autohaus Blog
+              Blogs
             </h1>
             <p className="text-xl md:text-2xl max-w-3xl mx-auto text-[#BDB6AD] leading-relaxed drop-shadow-lg">
               Expert insights on Japanese vehicle imports, auction guides, and buying advice.

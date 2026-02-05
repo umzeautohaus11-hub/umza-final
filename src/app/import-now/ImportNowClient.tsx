@@ -81,7 +81,7 @@ export default function ImportNow() {
             transition={{ duration: 1, delay: 0.3 }}
           >
             <h1 className="text-5xl md:text-7xl font-bold font-heading mb-8 leading-tight text-white drop-shadow-2xl">
-              Start Your Import Journey Today
+              Import JDM Cars in Australia
             </h1>
           </motion.div>
 

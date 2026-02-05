@@ -102,7 +102,7 @@ export default function VehicleListingClient({ initialVehicles, filterOptions }:
                         </motion.div>
 
                         <h1 className="text-5xl md:text-7xl font-bold font-heading mb-8 leading-tight text-[#EAE2D6] drop-shadow-2xl">
-                            Stock
+                            JDM Cars for Sale in Australia
                         </h1>
                         <div className="w-32 h-1 bg-gradient-to-r from-transparent via-[#25614F] to-transparent mx-auto mb-8"></div>
 

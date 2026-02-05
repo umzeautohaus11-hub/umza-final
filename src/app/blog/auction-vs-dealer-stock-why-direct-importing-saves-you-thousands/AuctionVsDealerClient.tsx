@@ -89,7 +89,7 @@ export default function AuctionVsDealerClient() {
                         </p>
 
                         <p className="leading-relaxed mb-8">
-                            While the convenience of a local dealer is tempting, the financial and qualitative benefits of direct importing are overwhelming. At UMZE Autohaus, we believe in transparency. In this guide, we’ll break down why the "long way around" is actually the smartest shortcut to your dream car.
+                            While the convenience of a local dealer is tempting, the financial and qualitative benefits of direct importing are overwhelming. If you are looking for <Link href="/" className="text-[#25614F] hover:underline">Japanese car imports Australia</Link> enthusiasts recommend or browsing the best <Link href="/vehicles-for-import" className="text-[#25614F] hover:underline">JDM cars for sale in Australia</Link>, at UMZE Autohaus, we believe in transparency. In this guide, we’ll break down why the "long way around" is actually the smartest shortcut to your dream car.
                         </p>
 
                         <h2 className="text-3xl font-bold font-heading text-[#EAE2D6] mt-12 mb-6">1. The Reality of the "Dealer Markup"</h2>

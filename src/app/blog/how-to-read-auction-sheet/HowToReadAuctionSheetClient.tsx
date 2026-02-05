@@ -85,7 +85,7 @@ export default function HowToReadAuctionSheetClient() {
                         className="prose prose-invert prose-lg max-w-none"
                     >
                         <p className="text-xl leading-relaxed mb-8">
-                            If you're new to importing cars from Japan, auction sheets can look intimidating. The codes, grades, and diagrams seem like a foreign language designed to confuse rather than inform. But here's the good news: once you understand the system, it becomes straightforward.
+                            If you're new to importing cars from Japan, auction sheets can look intimidating. The codes, grades, and diagrams seem like a foreign language designed to confuse rather than inform. But here's the good news: once you understand the system, it becomes straightforward. Whether you are browsing <Link href="/" className="text-[#25614F] hover:underline">Japanese car imports Australia</Link> or searching for your next dream ride among <Link href="/vehicles-for-import" className="text-[#25614F] hover:underline">JDM cars for sale in Australia</Link>, this guide is for you.
                         </p>
 
                         <h2 className="text-3xl font-bold font-heading text-[#EAE2D6] mt-12 mb-6">The 4 Key Sections of an Auction Sheet</h2>

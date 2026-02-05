@@ -89,7 +89,7 @@ export default function ComplianceRulesClient() {
                         </p>
 
                         <p className="leading-relaxed mb-8">
-                            In 2021, Australia fully transitioned to the Road Vehicle Standards Act (RVSA), changing the landscape for imports. Here is everything you need to know about the current state of Japanese car compliance in Australia.
+                            In 2021, Australia fully transitioned to the Road Vehicle Standards Act (RVSA), changing the landscape for imports. Whether you are navigating the rules for <Link href="/" className="text-[#25614F] hover:underline">Japanese car imports Australia</Link> or searching for compliant <Link href="/vehicles-for-import" className="text-[#25614F] hover:underline">JDM cars for sale in Australia</Link>, here is everything you need to know about the current state of Japanese car compliance in Australia.
                         </p>
 
                         <h2 className="text-3xl font-bold font-heading text-[#EAE2D6] mt-12 mb-6">1. What is SEVS? (The Golden Ticket)</h2>
