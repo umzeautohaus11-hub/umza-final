@@ -113,7 +113,7 @@ export default function ContactUsClient() {
                             <div className="bg-[#1a2420] p-8 rounded-2xl border border-[#25614F]/20">
                                 <h3 className="text-2xl font-bold text-[#EAE2D6] mb-6">Contact Details</h3>
                                 <div className="space-y-4">
-                                    <p className="text-[#BDB6AD]">Email: <a href="mailto:info@umzeautohaus.com" className="text-[#EAE2D6]">info@umzeautohaus.com</a></p>
+                                    <p className="text-[#BDB6AD]">Email: <a href="mailto:info@umzeautohaus.com.au" className="text-[#EAE2D6]">info@umzeautohaus.com.au</a></p>
                                     <p className="text-[#BDB6AD]">Phone: <a href="tel:+61420790798" className="text-[#EAE2D6]">+61 420 790 798</a></p>
                                     <p className="text-[#BDB6AD]">Location: Melbourne, Victoria</p>
                                 </div>

@@ -16,7 +16,7 @@ export default function ComplianceRulesClient() {
             <section className="relative text-white min-h-[80vh] flex items-center overflow-hidden -mt-20 pt-20">
                 <div className="absolute inset-0">
                     <img
-                        src="/images/WhatsApp Image 2025-12-26 at 17.11.464444.jpeg"
+                        src="/images/Mercedes-Benz-E53-Wagon-Collecting-Cars-25-11-2025-Ari-Gelgec52.avif"
                         alt="Australian vehicle compliance rules"
                         className="w-full h-full object-cover animate-ken-burns"
                     />

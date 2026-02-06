@@ -16,7 +16,7 @@ export default function BlogContent() {
             <section className="relative text-white min-h-[80vh] flex items-center overflow-hidden -mt-20 pt-20">
                 <div className="absolute inset-0">
                     <img
-                        src="/images/blog/wp12190157.webp"
+                        src="/images/integra_type-r_5.webp"
                         alt="Japanese Car Imports Australia Guide"
                         className="w-full h-full object-cover animate-ken-burns"
                     />

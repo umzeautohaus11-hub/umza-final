@@ -95,8 +95,8 @@ const Footer = () => {
                 </svg>
               </div>
               <h5 className="text-[#EAE2D6] font-semibold mb-2 uppercase text-sm">Email</h5>
-              <a href="mailto:info@umzeautohaus.com" className="text-[#BDB6AD] hover:text-[#25614F] transition-colors text-sm">
-                info@umzeautohaus.com
+              <a href="mailto:info@umzeautohaus.com.au" className="text-[#BDB6AD] hover:text-[#25614F] transition-colors text-sm">
+                info@umzeautohaus.com.au
               </a>
             </div>
           </motion.div>

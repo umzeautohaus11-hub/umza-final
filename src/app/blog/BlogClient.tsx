@@ -26,7 +26,7 @@ export default function Blog() {
       date: 'February 5, 2026',
       readTime: '15 min read',
       category: 'Buyer Education',
-      image: '/images/blog/wp12190157.webp'
+      image: '/images/integra_type-r_5.webp'
     },
     {
       id: 'auction-vs-dealer-stock-why-direct-importing-saves-you-thousands',
@@ -35,7 +35,7 @@ export default function Blog() {
       date: 'February 5, 2026',
       readTime: '10 min read',
       category: 'Buyer Education',
-      image: '/images/WhatsApp Image 2025-12-26 at 17.11.4722.jpeg'
+      image: '/images/Lexus-Collecting-Cars-22-08-2025-Ari-Gelgec25.avif'
     },
     {
       id: 'the-compliance-headache-how-new-sevs-rules-affect-your-next-import',
@@ -44,7 +44,7 @@ export default function Blog() {
       date: 'February 5, 2026',
       readTime: '12 min read',
       category: 'Import Rules',
-      image: '/images/WhatsApp Image 2025-12-26 at 17.11.464444.jpeg'
+      image: '/images/Mercedes-Benz-E53-Wagon-Collecting-Cars-25-11-2025-Ari-Gelgec52.avif'
     },
     {
       id: 'japanese-auction-grading-system',

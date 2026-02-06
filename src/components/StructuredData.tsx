@@ -29,7 +29,7 @@ export function OrganizationSchema({
             "longitude": 144.9631
         },
         "telephone": "+61420790798",
-        "email": "info@umzeautohaus.com",
+        "email": "info@umzeautohaus.com.au",
         "priceRange": "$$$$",
         "openingHoursSpecification": [
             {

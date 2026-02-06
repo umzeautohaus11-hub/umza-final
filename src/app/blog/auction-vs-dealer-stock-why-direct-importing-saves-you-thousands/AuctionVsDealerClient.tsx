@@ -16,7 +16,7 @@ export default function AuctionVsDealerClient() {
             <section className="relative text-white min-h-[80vh] flex items-center overflow-hidden -mt-20 pt-20">
                 <div className="absolute inset-0">
                     <img
-                        src="/images/WhatsApp Image 2025-12-26 at 17.11.4722.jpeg"
+                        src="/images/Lexus-Collecting-Cars-22-08-2025-Ari-Gelgec25.avif"
                         alt="Japanese car auction vs dealer stock"
                         className="w-full h-full object-cover animate-ken-burns"
                     />
